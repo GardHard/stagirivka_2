@@ -1,0 +1,1269 @@
+/*================================================================
+==================================================================
+==================================================================
+..................................................................
+.........000000.........0......0.....0.....0......................
+........0......0.......0.......0.....0.....0......................
+........0......0......0........0.....0.....0......................
+........0......0.....0.........0.....0.....0......................
+........0......0....0..........0.....0.....0......................
+........0......0...0..0000.....0.....0.....0......................
+........0......0...0......0....0.....0.....0......................
+........0......0...0......0....0.....0.....0......................
+........0......0...0......0....000000000000000....................
+........0......0...0......0..................0....................
+.........000000.....000000...................0....................
+..................................................................
+=================================================================
+=================================================================
+=================================================================*/
+body{
+    background-color: rgb(228, 228, 228);;
+}
+
+
+
+.headed{
+    position: relative;
+    left: -20px;
+    top: -20px;
+    width: 200%;
+    height: 92px;
+    background-color: white;
+}
+
+
+/*================================================================
+==================================================================
+==================================================================
+.............................................................
+............................0................................
+............................0................................
+............................0................................
+............................0................................
+............................0................................
+............................0................................
+............................0................................
+............................0................................
+............................0................................
+............................0................................
+............................0................................
+.............................................................
+=================================================================
+=================================================================
+=================================================================*/
+
+
+
+.one-center{
+    position: relative;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.one-up-content{
+    position: relative;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-self: center;
+}
+
+.one-block-left{
+    position: relative;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-self: center;
+    overflow: hidden;
+    z-index: 2;
+}
+
+
+
+.one-up-left{
+    position: relative;
+    width: 652px;
+    height: 318px;
+    background-color: white;
+    border-radius: 20px;
+    margin-top: 30px;
+    
+}
+.one-text-left-up{
+    position: relative;
+    width: 500px;
+    height: auto;
+    font-size: 48px;
+    font-weight: 500; 
+    font-family: "Roboto Flex", sans-serif;
+    text-align: left; 
+    padding-left: 20px;
+    padding-top: 30px;
+    color: #243048; 
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.one-vstavka{
+    position: relative;
+    width: auto;
+    height: auto;
+    font-size: 48px;
+    font-weight: 700; 
+    font-family: "Roboto Flex", sans-serif;
+    text-align: left; 
+    color: #007BFF; 
+    top: 110px;
+    right: 220px;
+}
+
+.one-text-left-botton{
+    position: relative;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    
+  
+}
+
+.one-buttom-left {
+    position: relative;
+    width: 163px;              
+    height: 44px;            
+    border-radius: 20px;      
+    background-color: #FFFFFF;
+    border: 2px solid #24304858; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+    display: flex;             
+    align-items: center;      
+    justify-content: center;   
+    text-align: center;        
+    cursor: pointer;          
+    margin-left: 20px;
+    transition: transform 0.1s ease, box-shadow 0.1s ease, border-color 0.1s ease;
+}
+
+
+.one-buttom-left:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+
+
+
+.one-buttom-left:active {
+    transform: scale(0.98); 
+    outline: none; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+.one-buttom-left span {
+    position: relative;
+    width: auto;              
+    height: auto; 
+    white-space: nowrap;      
+    order: 1;   
+    font-size: 14px;
+    font-weight: 700;
+    font-family: "Roboto Flex", sans-serif;
+    color: #1D263A;
+    text-align: left; 
+}
+
+
+.one-buttom-left img {
+    position: relative;
+    width: 16px;               
+    height: 16px;            
+    order: 2;                
+    margin-left: 10px;
+}
+
+/* --- ПРАВАЯ КНОПКА --- */
+
+.one-buttom-right {
+    position: relative;
+    width: 136px;              
+    height: 44px;             
+    border-radius: 20px;       
+    background-color: #FFFFFF; 
+    border: 2px solid #24304858; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+    
+    display: flex;            
+    align-items: center;     
+    justify-content: center;  
+    text-align: center;      
+    cursor: pointer;         
+    margin-left: 20px;
+    transition: transform 0.1s ease, box-shadow 0.1s ease, border-color 0.1s ease;
+}
+
+
+.one-buttom-right:hover {
+    transform: scale(1.02); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+
+
+.one-buttom-right:active {
+    transform: scale(0.98); 
+    outline: none; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+}
+
+
+.one-buttom-right span {
+    position: relative;
+    width: auto;               
+    height: auto; 
+    white-space: nowrap;      
+    order: 1;   
+    font-size: 16px;
+    font-weight: 600; 
+    font-family: "Roboto Flex", sans-serif;
+    color: #243048;
+    text-align: left; 
+}
+
+
+.one-buttom-right img {
+    position: relative;
+    width: 16px;              
+    height: 16px;             
+    order: 2;                 
+    margin-left: 20px;
+}
+
+.one-bottom-left{
+    position: relative;
+    width: 652px;
+    height: 318px;
+    background-color: #243048;
+    border-radius: 20px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.one-bottom-text-up{
+    position: relative;
+    width: 600px;
+    height: auto;
+    font-size: 36px;
+    font-weight: 500; 
+    font-family: "Roboto Flex", sans-serif;
+    color: #FFFFFF;
+    text-align: left; 
+    margin-top: 30px;
+    margin-left: 20px;
+    
+}
+
+.one-bottom-text-center{
+    width: auto;
+    height: auto;
+    font-size: 18px;
+    font-weight: 500; 
+    font-family: "Roboto Flex", sans-serif;
+    color: #7C8391;
+    text-align: left; 
+    margin-top: 15px;
+    margin-left: 20px;
+}
+
+.one-buttom-bottom-left {
+    width: 130px;              
+    height: 48px;             
+    background-color: #FFFFFF; 
+    border: none;              
+    display: flex;             
+    align-items: center;     
+    justify-content: center;   
+    text-align: center;        
+    font-size: 16px;          
+    cursor: pointer;          
+    box-sizing: border-box;    
+    border-radius: 20px;       
+    border: 2px solid #E9EAED; 
+    margin-left: 20px;
+    margin-top: 80px;
+
+    transition: transform 0.1s ease, box-shadow 0.1s ease, border-color 0.1s ease;
+}
+
+.one-buttom-bottom-left:hover {
+    transform: scale(1.02); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25); 
+    border-color: #243048; 
+}
+
+
+.one-buttom-bottom-left:focus {
+    outline: 2px solid #243048; 
+    outline-offset: 2px;
+}
+
+
+.one-buttom-bottom-left:active {
+    transform: scale(0.98); 
+    border-color: #243048; 
+}
+
+.one-buttem-bottem-left-text{
+    width: auto;
+    height: auto;
+    font-size: 16px;
+    font-weight: 700; 
+    font-family: "Roboto Flex", sans-serif;
+    color: #243048;
+    text-align: left; 
+}
+
+.one-block-two{
+    position: relative;
+    width: 652px;
+    height: 652px;
+    background-color: white;
+    border-radius: 20px;
+    margin-left: 20px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.one-block-two-up{
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    z-index: 2;
+}
+
+
+
+
+
+.one-block-two-up-text{
+    width: 80px;
+    height: auto;
+    font-size: 12px;
+    font-weight: 500; 
+    font-family: "Roboto Flex", sans-serif;
+    color: #ffffff;
+    text-align: left; 
+    display: flex;
+    align-items: center;
+    padding-top: 6px;    
+    justify-content: center;
+    z-index: 2;
+}
+
+.one-block-two-center{
+    position: relative;
+    width: auto;
+    height: auto;
+    margin-top: 230px;
+    display: flex;
+    flex-direction: row;
+    z-index: 2;
+}
+
+.one-block-two-center-left{
+    position: relative;
+    width: 48px;
+    height: 64px;
+    background-color: #243048;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.7;
+    z-index: 2;
+}
+
+.one-block-two-center-photo-left{
+    position: relative;
+    width: auto;
+    height: auto;
+    z-index: 2;
+}
+
+.one-block-two-center-right{
+    position: relative;
+    width: 48px;
+    height: 64px;
+    margin-left: 560px;
+    background-color: #243048;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.7;
+    z-index: 2;
+}
+
+.one-block-two-center-photo-right{
+    position: relative;
+    width: auto;
+    height: auto;
+    transform: rotate(180deg);
+    z-index: 2;
+}
+
+.one-block-two-bottom{
+    position: relative;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    margin-top: 100px;
+    z-index: 2;
+}
+
+.one-block-two-bottom-left{
+    position: relative;
+    width: auto;
+    height: auto;
+    z-index: 2;
+    margin-top: 60px;
+    margin-left: 40px;
+}
+
+.one-block-bottom-two-up-text{
+    position: relative;
+    width: auto;
+    height: auto;
+    font-size: 30px;
+    font-weight: 500;
+    font-family: "Roboto Flex", sans-serif;
+    color: #ffffff;
+    text-align: left; 
+    z-index: 2;
+    
+}
+
+.one-photo-slider{
+    position: absolute;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    border-radius: 20px;
+     display: none;
+}
+
+.one-block-bottom-two-bottom-text{
+    position: relative;
+    width: auto;
+    height: auto;
+    z-index: 1;
+    font-size: 16px;
+    font-weight: 500; 
+    font-family: "Roboto Flex", sans-serif;
+    color: #ffffff;
+    text-align: left; 
+    margin-top: 20px;
+    z-index: 2;
+}
+
+.one-photo-gradient{
+    position: absolute;
+    width: auto;
+    height: auto;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    z-index: 1;
+}
+
+.one-block-two-bottom-right{
+    position: relative;
+    width: auto;
+    height: auto;
+}
+
+
+.one-block-two-bottom-right-krug {
+  position: relative; 
+  width: 40px;
+  height: 40px;
+  background-color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 40px; 
+  margin-top: 140px;
+  margin-left: 170px;
+  border: 2px solid #ccc; 
+  cursor: pointer; 
+  border: none;
+  outline: none;
+  padding: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.2s;
+}
+
+/* Стили для изображения внутри */
+.one-block-two-bottom-right-strelka {
+  width: 20px;               
+  height: 20px;            
+  object-fit: contain;     
+ 
+  pointer-events: none;          
+}
+
+
+.one-block-two-bottom-right-krug:hover {
+  background-color: #f0f0f0; 
+}
+
+
+.one-block-two-bottom-right-krug:active {
+  transform: scale(0.95);     /* Небольшое уменьшение при нажатии */
+}
+
+
+.one-photo-taimer-animate {
+    position: relative;
+    width: auto; 
+    height: auto; 
+    display: flex;
+    flex-direction: row; 
+    z-index: 2;
+    box-sizing: border-box;
+}
+
+
+.one-photo-taimer-animate-companent-one,
+.one-photo-taimer-animate-companent-two,
+.one-photo-taimer-animate-companent-three,
+.one-photo-taimer-animate-companent-fore {
+    position: relative; /* Для позиционирования потомков */
+    z-index: 2;
+    width: 80px;  /* Фиксированная ширина */
+    height: 4px;  /* Фиксированная высота */
+    background-color: transparent; /* Прозрачный фон у контейнера */
+    opacity: 1;
+    flex-shrink: 0;
+    flex-grow: 0;
+    box-sizing: border-box;
+    
+   
+}
+
+.one-photo-taimer-animate-row{
+    position: relative;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+
+.one-photo-taimer-animate-companent-one::before,
+.one-photo-taimer-animate-companent-two::before,
+.one-photo-taimer-animate-companent-three::before,
+.one-photo-taimer-animate-companent-fore::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff; /* Цвет фона */
+    opacity: 0.1; /* Прозрачность фона */
+    z-index: 1;
+}
+
+/* Классы для активных полосок */
+.one-photo-taimer-animate-companent-one.active::before,
+.one-photo-taimer-animate-companent-two.active::before,
+.one-photo-taimer-animate-companent-three.active::before,
+.one-photo-taimer-animate-companent-fore.active::before {
+    opacity: 0.7; /* Фон активной полоски */
+}
+
+
+.one-photo-taimer-animate-companent-one::after,
+.one-photo-taimer-animate-companent-two::after,
+.one-photo-taimer-animate-companent-three::after,
+.one-photo-taimer-animate-companent-fore::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: var(--progress-width, 0%); /* Используем переменную из style элемента */
+    height: 100%;
+    background-color: #ffffff; /* Цвет заполнения */
+    z-index: 2;
+    opacity: 1; /* Или другое значение */
+    transition: width 0.1s linear; /* Плавный переход ширины */
+}
+
+.one-photo-slider.visible {
+    display: block; /* Показываем активное изображение */
+}
+
+
+/* Стили для стрелок */
+.one-block-two-center-left,
+.one-block-two-center-right {
+    cursor: pointer; /* Курсор в виде указателя при наведении */
+    transition: opacity 0.2s ease;
+}
+
+.one-block-two-center-left:hover,
+.one-block-two-center-right:hover {
+    opacity: 1; 
+}
+
+.one-block-two-center-photo-left,
+.one-block-two-center-photo-right {
+    pointer-events: none; /* Отключаем события мыши для изображений стрелок */
+}
+
+.slider-container {
+    position: absolute;
+    width: 100%;
+    height: 100%; /* Установите нужную высоту */
+    overflow: hidden;
+}
+
+.one-indicator-text {
+    position: relative;
+    display: flex;
+    width: 35px;
+    height: 20px;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    align-items: center; 
+    justify-content: center; 
+    /* Скрываем по умолчанию */
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*================================================================
+==================================================================
+==================================================================
+.........0000....0.....0.....0.....0.......0000000...............
+........0...0....0.....0.....0.....0......0.......0..............
+.......0....0....0.....0.....0.....0.....0.........0.............
+......0.....0....0.....0.....0.....0.....0.........0.............
+.....0......0....0.....0.....0.....0.....0.........0.............
+............0....0000000.....0000000.....0.........0.............
+............0..........0...........0.....0.........0.............
+............0..........0...........0.....0.........0.............
+............0..........0...........0.....0.........0.............
+............0..........0...........0.....0.........0.............
+............0..........0...........0.....0.........0.............
+............0..........0...........0......0.......0..............
+............0..........0...........0.......0000000...............
+=================================================================
+=================================================================
+=================================================================*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 1440px) {
+
+
+/*================================================================
+==================================================================
+==================================================================
+.............................................................
+............................0................................
+............................0................................
+............................0................................
+............................0................................
+............................0................................
+............................0................................
+............................0................................
+............................0................................
+............................0................................
+............................0................................
+............................0................................
+.............................................................
+=================================================================
+=================================================================
+=================================================================*/
+
+
+
+
+.one-block-two-up-up{
+    position: relative;
+    width: 80px ;
+    height: 28px;
+    background-color: #243048;
+    border-radius: 20px;
+    z-index: 2;
+    left: 40px;
+    top: 10px;
+}
+
+.one-block-two-up-text{
+    width: 80px;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*================================================================
+==================================================================
+==================================================================
+..........0000000.......000000......0.......0....................
+.........0.......0.....0......0.....0.......0....................
+........0.........0...0.......0.....0.......0....................
+........0.........0...........0.....0.......0....................
+........0.........0..........0......0.......0....................
+.........0.......0..........0.......0.......0....................
+..........0000000..........0........000000000....................
+.........0.......0..........0...............0....................
+........0.........0..........0..............0....................
+........0.........0...........0.............0....................
+........0.........0...0.......0.............0....................
+.........0.......0.....0.....0..............0....................
+..........0000000.......00000...............0....................
+=================================================================
+=================================================================
+=================================================================*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 834px) and (max-width: 1439px) {
+    
+
+
+
+/*================================================================
+==================================================================
+==================================================================
+.............................................................
+............................0................................
+............................0................................
+............................0................................
+............................0................................
+............................0................................
+............................0................................
+............................0................................
+............................0................................
+............................0................................
+............................0................................
+............................0................................
+.............................................................
+=================================================================
+=================================================================
+=================================================================*/
+
+
+.one-up-content{
+    position: relative;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-self: center;
+}
+
+
+.one-block-two{
+    margin-left: 0px;
+    margin-top: 10px;
+}
+
+.one-up-left{
+    margin-top: 20px;
+}
+
+.one-bottom-left{
+    margin-top: 10px;
+}
+
+.one-block-two-up-up{
+    width: 80px ;
+    left: 30px;
+    top: 10px;
+    
+}
+
+.one-block-two-up-text{
+    width: 80px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*================================================================
+==================================================================
+==================================================================
+.......000000.........00000.........000000......................
+......0......0.......0.....0.......0......0.....................
+.....0........0.....0.......0.....0........0....................
+..............0.....0.............0........0....................
+.............0......0.............0........0....................
+............0.......0.............0........0....................
+...........0........0..00000......0........0....................
+............0.......0.0.....0.....0........0....................
+.............0......0........0....0........0....................
+..............0.....0........0....0........0....................
+.....0........0.....0........0....0........0....................
+......0......0......0........0.....0......0.....................
+.......000000........00000000.......000000......................
+=================================================================
+=================================================================
+=================================================================*/
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 833px) {
+
+
+
+/*================================================================
+==================================================================
+==================================================================
+.............................................................
+............................0................................
+............................0................................
+............................0................................
+............................0................................
+............................0................................
+............................0................................
+............................0................................
+............................0................................
+............................0................................
+............................0................................
+............................0................................
+.............................................................
+=================================================================
+=================================================================
+=================================================================*/
+
+
+
+.one-up-content{
+    position: relative;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-self: center;
+}
+
+
+.one-block-left{
+    position: relative;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-self: center;
+    overflow: hidden;
+    z-index: 2;
+}
+
+
+
+/*  проверить */
+.one-up-left{
+    width: 328px;
+    height: 234px;
+    margin-top: 30px;
+}
+
+.one-text-left-up{
+    width: 300px;
+    font-size: 30px;
+}
+
+.one-vstavka{
+    font-size: 30px;
+    top: 70px;
+    right: 125px;
+}
+
+.one-buttom-left {
+    width: 155px;             
+    height: 40px;   
+    margin-left: 15px;         
+}
+
+.one-buttom-right {
+    width: 120px;            
+    height: 40px;        
+    margin-left: 10px;    
+}
+
+.one-bottom-left{
+    width: 328px;
+    height: 264px;
+    margin-top: 10px;
+}
+
+.one-bottom-text-up{
+    width: 250px;
+    font-size: 24px;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+.one-bottom-text-center{
+    width: 200px;
+    font-size: 14px;
+    margin-top: 15px;
+    margin-left: 20px;
+}
+
+.one-buttom-bottom-left {
+    width: 280px;             
+    height: 48px;             
+    font-size: 14px;         
+    margin-top: 30px;
+}
+.one-block-two{
+    position: relative;
+    width: 328px;
+    height: 420px;
+    border-radius: 20px;
+    margin-left: 0px;
+    margin-top: 10px;
+    z-index: 2;
+  
+}
+
+.one-block-two-up{
+   
+    position: relative;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0px;
+    padding-left: 0px;
+}
+
+.one-block-two-up-up{
+    top: 5px;
+    right: 90px;
+    margin-right: 0px;
+    z-index: 3;
+    width: 80px;
+}
+
+.one-block-two-up-text{
+    width: 80px;
+}
+
+
+.one-indicator-text {
+    display: flex; /* Показываем блок как flex-контейнер */
+    left: 80px;
+    top: 5px;
+}
+
+
+
+#slideCounter {
+    font-size: 12px; /* Уменьшим размер шрифта */
+    font-weight: bold; /* Сделаем жирным */
+    color: #243048; /* Цвет текста */
+    margin: 0; /* Убираем отступы */
+    padding: 0; /* Убираем внутренние отступы */
+    text-align: center; /* Выравнивание по центру */
+    white-space: nowrap; /* Запрещаем перенос на новую строку */
+    pointer-events: none; /* Отключаем взаимодействие с мышью для текста */
+    line-height: 1; /* Высота строки */
+    overflow: hidden; /* Скрываем переполнение, если текст вдруг станет больше */
+    /* width: 100%; /* Опционально: занимает всю ширину родителя */
+    /* box-sizing: border-box; /* Включает padding в расчёт ширины */
+}
+
+ 
+
+
+.one-block-two-center{
+    display: none;
+}
+
+.one-block-two-bottom-left{
+    position: relative;
+    width: auto;
+    height: auto;
+    z-index: 2;
+    margin-top: 100px;
+    margin-left: 0px;
+}
+.one-block-bottom-two-up-text{
+    width: 230px;
+    font-size: 24px;
+    
+}
+.one-block-bottom-two-bottom-text{
+    width: 260px;
+    font-size: 14px;
+    margin-top: 20px;
+}
+.one-photo-taimer-animate-row{
+    gap: 5px;
+    margin-top: 50px;
+}
+
+.one-photo-taimer-animate-companent-one,
+.one-photo-taimer-animate-companent-two,
+.one-photo-taimer-animate-companent-three,
+.one-photo-taimer-animate-companent-fore {
+    width: 24px;  
+    height: 4px;  
+}
+.one-block-two-bottom-right-krug {
+ 
+  margin-top: 220px;
+  margin-left: 0px;
+  border: 2px solid #ccc; /* (Опционально) добавим границу для наглядности */
+  cursor: pointer; /* Курсор указателя */
+  /* Убираем стандартные стили кнопки */
+  border: none;
+  outline: none;
+  padding: 0;
+  /* (Опционально) добавим тень */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  /* (Опционально) добавим плавный переход */
+  transition: background-color 0.2s;
+}
+
+.slider-container {
+    position: absolute;
+    width: 328px;
+    height: 420px; /* Установите нужную высоту */
+    overflow: hidden;
+}
+
+.one-photo-slider{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
