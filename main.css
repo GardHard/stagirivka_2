@@ -105,14 +105,15 @@
 }
 .one-text-left-up{
     position: relative;
-    width: 500px;
+    width: auto;
     height: auto;
     font-size: 48px;
     font-weight: 500; 
     font-family: "Roboto Flex", sans-serif;
     text-align: left; 
-    padding-left: 20px;
-    padding-top: 30px;
+    margin-left: 20px;
+    margin-top: 30px;
+    margin-right: 100px;
     color: #243048; 
     margin-bottom: 30px;
     display: flex;
@@ -148,10 +149,9 @@
     position: relative;
     width: 163px;              
     height: 44px;            
-    border-radius: 20px;      
+    border-radius: 100px;    
     background-color: #FFFFFF;
-    border: 2px solid #24304858; 
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+    border: 1px solid #E9EAED;
     display: flex;             
     align-items: center;      
     justify-content: center;   
@@ -159,8 +159,10 @@
     cursor: pointer;          
     margin-left: 20px;
     transition: transform 0.1s ease, box-shadow 0.1s ease, border-color 0.1s ease;
+       /* Убираем возможную стилизацию по умолчанию */
+    font: inherit;
+    color: inherit;
 }
-
 
 .one-buttom-left:hover {
     transform: scale(1.02);
@@ -207,9 +209,8 @@
     height: 44px;             
     border-radius: 20px;       
     background-color: #FFFFFF; 
-    border: 2px solid #24304858; 
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
-    
+    border: 1px solid #E9EAED;
+    border-radius: 100px;
     display: flex;            
     align-items: center;     
     justify-content: center;  
@@ -270,7 +271,7 @@
 
 .one-bottom-text-up{
     position: relative;
-    width: 600px;
+    width: auto;
     height: auto;
     font-size: 36px;
     font-weight: 500; 
@@ -279,6 +280,7 @@
     text-align: left; 
     margin-top: 30px;
     margin-left: 20px;
+    margin-right: 20px;
     
 }
 
@@ -292,6 +294,7 @@
     text-align: left; 
     margin-top: 15px;
     margin-left: 20px;
+    margin-right: 20px;
 }
 
 .one-buttom-bottom-left {
@@ -364,7 +367,8 @@
     height: auto;
     display: flex;
     flex-direction: row;
-    z-index: 2;
+    z-index: 3;
+    top: -200px;
 }
 
 
@@ -390,12 +394,15 @@
     position: relative;
     width: auto;
     height: auto;
-    margin-top: 230px;
     display: flex;
     flex-direction: row;
-    z-index: 2;
+    z-index: 3;
+    top: 20px;
 }
-
+.one-block-two-center-strelka-right-pos{
+    position: relative;
+    left: 278px;
+}
 .one-block-two-center-left{
     position: relative;
     width: 48px;
@@ -408,6 +415,11 @@
     justify-content: center;
     opacity: 0.7;
     z-index: 2;
+    outline: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
 }
 
 .one-block-two-center-photo-left{
@@ -417,11 +429,14 @@
     z-index: 2;
 }
 
+.one-block-two-center-strelka-left-pos{
+    position: relative;
+    right: 278px;
+}
 .one-block-two-center-right{
     position: relative;
     width: 48px;
     height: 64px;
-    margin-left: 560px;
     background-color: #243048;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
@@ -430,6 +445,11 @@
     justify-content: center;
     opacity: 0.7;
     z-index: 2;
+    outline: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
 }
 
 .one-block-two-center-photo-right{
@@ -439,74 +459,123 @@
     transform: rotate(180deg);
     z-index: 2;
 }
-
 .one-block-two-bottom{
     position: relative;
     width: auto;
     height: auto;
     display: flex;
     flex-direction: row;
-    margin-top: 100px;
+    margin-top: 0px;
+    top: 150px;
+    right: 100px;
     z-index: 2;
+}
+
+    /* Обертка для каждого слайда (картинка + текст) */
+.one-photo-container {
+    position: relative;
+    width: auto;
+    height: auto; /* Или фиксированная высота, если у вас есть */
+    display: block; /* Или flex, в зависимости от контекста */
 }
 
 .one-block-two-bottom-left{
     position: relative;
     width: auto;
     height: auto;
+    display: flex;
+    flex-direction: column;
     z-index: 2;
-    margin-top: 60px;
-    margin-left: 40px;
+    
+}
+/* Общие стили для текстовых блоков */
+/* Общие стили для текстовых блоков */
+.one-block-bottom-two-up-text-position-1,
+.one-block-bottom-two-up-text-position-2,
+.one-block-bottom-two-up-text-position-3,
+.one-block-bottom-two-up-text-position-4 {
+    position: absolute; /* Теперь они позиционируются относительно .one-photo-container */
+    top: -20px; /* Пример отступа сверху */
+    left: -150px; /* Пример отступа слева */
+    /* z-index: 10; - УБРАНО, будет задаваться в JS */
+    opacity: 0; /* По умолчанию скрыты */
+    transition: opacity 0.5s ease; /* Плавность появления/исчезновения */
+    z-index: 3; /* Выше градиента */
 }
 
+
+
+/* Стиль для активного (видимого) текстового блока */
+/* Нужно будет переключать этот класс в JS */
+.one-photo-container.active .one-block-bottom-two-up-text-position-1,
+.one-photo-container.active .one-block-bottom-two-up-text-position-2,
+.one-photo-container.active .one-block-bottom-two-up-text-position-3,
+.one-photo-container.active .one-block-bottom-two-up-text-position-4 {
+    opacity: 1; /* Делаем видимым */
+}
 .one-block-bottom-two-up-text{
     position: relative;
-    width: auto;
+    width: 400px;
     height: auto;
     font-size: 30px;
     font-weight: 500;
     font-family: "Roboto Flex", sans-serif;
     color: #ffffff;
     text-align: left; 
-    z-index: 2;
+    margin-bottom: 15px;
     
 }
 
 .one-photo-slider{
-    position: absolute;
     width: auto;
     height: auto;
-    z-index: 0;
-    border-radius: 20px;
-     display: none;
+    object-fit: cover; /* Или fill, contain, в зависимости от нужного поведения */
+    opacity: 0;
+    transition: opacity 0.5s ease; /* Плавность переключения */
+    position: absolute; /* Чтобы картинки лежали друг над другом */
+    top: -490px;
+    left: -205px;
+    z-index: 1;
+    pointer-events: none;
 }
+/* Класс для видимого слайда */
+.one-photo-slider.visible {
+    pointer-events: auto;
+    opacity: 1;
+}
+
 
 .one-block-bottom-two-bottom-text{
     position: relative;
-    width: auto;
+    width: 400px;
     height: auto;
     font-size: 16px;
     font-weight: 500; 
     font-family: "Roboto Flex", sans-serif;
     color: #ffffff;
     text-align: left; 
-    margin-top: 20px;
-    z-index: 2;
 }
-
-.one-photo-gradient{
+/* Стили для градиента (выше фотографии, но ниже текста) */
+.one-photo-gradient {
     position: absolute;
     width: auto;
     height: auto;
+    top: -400px;
+    left: -205px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-    z-index: 1;
+    /* УСТАНАВЛИВАЕМ z-index ВСЕГДА, НЕ ТОЛЬКО ДЛЯ АКТИВНОГО */
+    z-index: 2; /* Выше фотографии (z-index: 1), но ниже текста (z-index: 3) */
+    /* top, left, right, bottom - нужно указать для позиционирования */
+    object-fit: cover; /* Или fill, contain, в зависимости от нужного поведения */
 }
 
 .one-block-two-bottom-right{
     position: relative;
     width: auto;
     height: auto;
+    left: 525px;
+    top: 50px;
 }
 
 
@@ -519,8 +588,8 @@
   align-items: center;
   justify-content: center;
   border-radius: 40px; 
-  margin-top: 140px;
-  margin-left: 170px;
+  margin-top: 0px;
+  margin-left: 0px;
   border: 2px solid #ccc; 
   cursor: pointer; 
   border: none;
@@ -535,7 +604,6 @@
   width: 20px;               
   height: 20px;            
   object-fit: contain;     
- 
   pointer-events: none;          
 }
 
@@ -551,12 +619,14 @@
 
 
 .one-photo-taimer-animate {
-    position: relative;
+    position: absolute;
     width: auto; 
     height: auto; 
     display: flex;
+    left: 50px;
+    top: 590px;
     flex-direction: row; 
-    z-index: 2;
+    z-index: 3;
     box-sizing: border-box;
 }
 
@@ -659,7 +729,7 @@
 }
 
 .one-indicator-text {
-    position: relative;
+    position: absolute;
     display: flex;
     width: 35px;
     height: 20px;
@@ -1447,14 +1517,14 @@
 =================================================================
 =================================================================*/
 .one-block-two-up-up{
-    position: relative;
+    position: absolute;
     width: 80px ;
     height: 28px;
     background-color: #243048;
     border-radius: 20px;
-    z-index: 2;
+    z-index: 3;
     left: 40px;
-    top: 10px;
+    top: -40px;
 }
 .one-block-two-up-text{
     width: 80px;
@@ -1652,14 +1722,14 @@
     margin-top: 10px;
 }
 .one-block-two-up-up{
-    position: relative;
+    position: absolute;
     width: 80px ;
     height: 28px;
     background-color: #243048;
     border-radius: 20px;
     z-index: 2;
-    left: 30px;
-    top: 10px;
+    left: 40px;
+    top: 0px;
 }
 .one-block-two-up-text{
     width: 80px;
@@ -2015,7 +2085,6 @@
     margin-top: 10px;
 }
 .one-bottom-text-up{
-    width: 250px;
     font-size: 24px;
     margin-top: 30px;
     margin-left: 20px;
@@ -2052,16 +2121,17 @@
     justify-content: center;
     margin-top: 0px;
     padding-left: 0px;
+    top: -120px;
 }
 
 .one-block-two-up-up{
-    position: relative;
+    position: absolute;
     width: 80px ;
     height: 28px;
     background-color: #243048;
     border-radius: 20px;
     z-index: 3;
-    left: -80px;
+    left: 20px;
     right: 0px;
     top: 5px;
     margin-right: 0px;
@@ -2071,8 +2141,8 @@
 }
 .one-indicator-text {
     display: flex; /* Показываем блок как flex-контейнер */
-    left: 80px;
-    top: 5px;
+    top: 10px;
+    right: 20px;
 }
 #slideCounter {
     font-size: 12px; /* Уменьшим размер шрифта */
@@ -2088,6 +2158,7 @@
     /* width: 100%; /* Опционально: занимает всю ширину родителя */
     /* box-sizing: border-box; /* Включает padding в расчёт ширины */
 }
+
 .one-block-two-center{
     display: none;
 }
@@ -2096,8 +2167,9 @@
     width: auto;
     height: auto;
     z-index: 2;
-    margin-top: 100px;
+    margin-top: 0px;
     margin-left: 0px;
+    top: 115px;
 }
 .one-block-bottom-two-up-text{
     width: 230px;
@@ -2109,9 +2181,13 @@
     font-size: 14px;
     margin-top: 20px;
 }
+.one-photo-taimer-animate{
+    top: 390px;
+    left: 30px;
+}
 .one-photo-taimer-animate-row{
     gap: 5px;
-    margin-top: 50px;
+    margin-top: 0px;
 }
 .one-photo-taimer-animate-companent-one,
 .one-photo-taimer-animate-companent-two,
@@ -2120,9 +2196,12 @@
     width: 24px;  
     height: 4px;  
 }
+.one-block-two-bottom-right{
+    left: 225px;
+}
 .one-block-two-bottom-right-krug {
  
-  margin-top: 220px;
+  margin-top: 0px;
   margin-left: 0px;
   border: 2px solid #ccc; /* (Опционально) добавим границу для наглядности */
   cursor: pointer; /* Курсор указателя */

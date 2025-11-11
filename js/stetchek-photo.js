@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const numSlides = 4; // Общее количество слайдов/полосок
 
     // --- ПОЛУЧЕНИЕ ЭЛЕМЕНТОВ ---
-
     // Прогресс-бары
     const progressBarOne = document.querySelector('.one-photo-taimer-animate-companent-one');
     const progressBarTwo = document.querySelector('.one-photo-taimer-animate-companent-two');
@@ -15,17 +14,17 @@ document.addEventListener('DOMContentLoaded', function() {
     const progressBarFore = document.querySelector('.one-photo-taimer-animate-companent-fore');
     const progressBars = [progressBarOne, progressBarTwo, progressBarThree, progressBarFore];
 
-    // Слайды
-    const slides = document.querySelectorAll('.one-photo-slider');
-    console.log("Найдено слайдов:", slides.length);
+    // КОНТЕЙНЕРЫ слайдов (картинка + градиент + текст)
+    const slideContainers = document.querySelectorAll('.one-photo-container');
+    console.log("Найдено контейнеров слайдов:", slideContainers.length);
 
     // Стрелки слайдера
     const leftArrow = document.querySelector('.one-block-two-center-left');
     const rightArrow = document.querySelector('.one-block-two-center-right');
 
     // Индикатор текста слайдера (мобильный)
-    const indicatorTextElement = document.getElementById('slideCounter'); // Используем ID из HTML
-    console.log("Найден элемент счётчика:", !!indicatorTextElement); // Отладка
+    const indicatorTextElement = document.getElementById('slideCounter');
+    console.log("Найден элемент счётчика:", !!indicatorTextElement);
 
     // Кнопки "Новостройки", "Ипотека", "Подробнее"
     const myButton = document.querySelector('.one-buttom-left');
@@ -44,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (indicatorTextElement) {
             const currentSlideNumber = currentSlide + 1; // Индексы начинаются с 0
             indicatorTextElement.textContent = `${currentSlideNumber}/${numSlides}`;
-            console.log(`Индикатор счётчика обновлён: ${currentSlideNumber}/${numSlides}`); // Отладка
+            console.log(`Индикатор счётчика обновлён: ${currentSlideNumber}/${numSlides}`);
         } else {
             console.warn("Элемент индикатора текста (#slideCounter) не найден при попытке обновить.");
         }
@@ -52,10 +51,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Функция для сброса прогресса и переключения слайда
     function goToSlide(index) {
-        console.log("=== goToSlide вызван с индексом:", index, "==="); // Отладка
+        console.log("=== goToSlide вызван с индексом:", index, "===");
+
         // --- ОЧИСТКА ПРЕДЫДУЩЕГО СОСТОЯНИЯ ---
         if (fillInterval) {
-            console.log("Очищаем интервал для слайда:", currentSlide); // Отладка
+            console.log("Очищаем интервал для слайда:", currentSlide);
             clearInterval(fillInterval);
             fillInterval = null;
         }
@@ -65,37 +65,66 @@ document.addEventListener('DOMContentLoaded', function() {
             if (bar) {
                 bar.style.setProperty('--progress-width', '0%');
                 bar.classList.remove('active');
-                console.log(`Сброшена полоска ${i + 1}`); // Отладка
+                console.log(`Сброшена полоска ${i + 1}`);
             }
         });
 
-        // Скрываем все слайды
-        slides.forEach((slide, i) => {
-            slide.classList.remove('visible');
-            console.log(`Скрыт слайд ${i + 1} (SRC: ${slide.getAttribute('src')})`); // Отладка
+        // Скрываем все КОНТЕЙНЕРЫ слайдов
+        slideContainers.forEach((container, i) => {
+            container.classList.remove('active');
+            // Сбрасываем z-index ТОЛЬКО для картинки (т.к. градиент и текст теперь всегда с фикс. z-index)
+            const sliderImg = container.querySelector('.one-photo-slider');
+            // const gradientImg = container.querySelector('.one-photo-gradient'); // БОЛЬШЕ НЕ НУЖНО
+            // const textDiv = container.querySelector('[class*="one-block-bottom-two-up-text-position-"]'); // БОЛЬШЕ НЕ НУЖНО
+
+            if (sliderImg) {
+                sliderImg.style.zIndex = '1'; // Устанавливаем z-index для невидимого слайда
+            }
+            // if (gradientImg) { // БОЛЬШЕ НЕ НУЖНО
+            //     gradientImg.style.zIndex = '2'; // Убираем, т.к. z-index теперь в CSS
+            // }
+            // if (textDiv) { // БОЛЬШЕ НЕ НУЖНО
+            //     textDiv.style.zIndex = '3'; // Убираем, т.к. z-index теперь в CSS
+            // }
+            console.log(`Сброшен z-index для элементов контейнера слайда ${i + 1}`);
         });
 
         // --- ПЕРЕКЛЮЧЕНИЕ НА НОВЫЙ СЛАЙД ---
-        if (slides[index]) {
-            slides[index].classList.add('visible');
-            console.log(`Показан слайд ${index + 1} (SRC: ${slides[index].getAttribute('src')})`); // Отладка
+        if (slideContainers[index]) {
+            // Показываем только выбранный контейнер
+            slideContainers[index].classList.add('active');
+            // Устанавливаем z-index для активного слайда (только картинка)
+            const activeSliderImg = slideContainers[index].querySelector('.one-photo-slider');
+            // const activeGradientImg = slideContainers[index].querySelector('.one-photo-gradient'); // БОЛЬШЕ НЕ НУЖНО
+            // const activeTextDiv = slideContainers[index].querySelector('[class*="one-block-bottom-two-up-text-position-"]'); // БОЛЬШЕ НЕ НУЖНО
+
+            if (activeSliderImg) {
+                activeSliderImg.style.zIndex = '1'; // Устанавливаем z-index для видимого слайда
+            }
+            // if (activeGradientImg) { // БОЛЬШЕ НЕ НУЖНО
+            //     activeGradientImg.style.zIndex = '2'; // Убираем, т.к. z-index теперь в CSS
+            // }
+            // if (activeTextDiv) { // БОЛЬШЕ НЕ НУЖНО
+            //     activeTextDiv.style.zIndex = '3'; // Убираем, т.к. z-index теперь в CSS
+            // }
+            console.log(`Установлен z-index для активного контейнера слайда ${index + 1}`);
         } else {
-            console.error("Слайд с индексом", index, "не найден в массиве slides!"); // Отладка
+            console.error("Контейнер слайда с индексом", index, "не найден в массиве slideContainers!");
             return;
         }
 
         if (progressBars[index]) {
-            console.log(`Активирована полоска для слайда ${index + 1}`); // Отладка
+            console.log(`Активирована полоска для слайда ${index + 1}`);
         } else {
-            console.error("Прогресс-бар с индексом", index, "не найден в массиве progressBars!"); // Отладка
+            console.error("Прогресс-бар с индексом", index, "не найден в массиве progressBars!");
         }
 
         currentSlide = index;
-        console.log("currentSlide установлен в:", currentSlide); // Отладка
+        console.log("currentSlide установлен в:", currentSlide);
         progress = 0; // Сбрасываем прогресс
 
         // --- ОБНОВЛЕНИЕ ИНДИКАТОРА ТЕКСТА (Мобильный) ---
-        updateCounter(); // Вызываем функцию обновления счётчика
+        updateCounter();
         // --- КОНЕЦ ОБНОВЛЕНИЯ ИНДИКАТОРА ---
 
         startFillProgress();
@@ -115,48 +144,48 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Функция запуска анимации заполнения
     function startFillProgress() {
-        console.log("--- startFillProgress вызван для слайда:", currentSlide, "---"); // Отладка
+        console.log("--- startFillProgress вызван для слайда:", currentSlide, "---");
         if (currentSlide < 0 || currentSlide >= progressBars.length) {
             console.warn("Некорректный индекс слайда для заполнения:", currentSlide);
             return;
         }
 
-        if (currentSlide >= slides.length) {
-             console.error("Индекс слайда", currentSlide, "превышает количество слайдов:", slides.length);
+        if (currentSlide >= slideContainers.length) {
+             console.error("Индекс слайда", currentSlide, "превышает количество контейнеров:", slideContainers.length);
              return;
         }
 
         if (fillInterval) {
-            console.log("Предупреждение: startFillProgress вызван, но fillInterval не был очищен ранее для слайда:", currentSlide); // Отладка
+            console.log("Предупреждение: startFillProgress вызван, но fillInterval не был очищен ранее для слайда:", currentSlide);
             clearInterval(fillInterval);
         }
 
         const increment = 100 / (fillDuration / 100); // Увеличение % за 100мс
         const targetBar = progressBars[currentSlide];
-        const targetSlide = slides[currentSlide];
+        const targetContainer = slideContainers[currentSlide]; // Получаем контейнер
 
         if (!targetBar) {
             console.error("Целевая полоска не найдена для индекса:", currentSlide);
             return;
         }
 
-        if (!targetSlide) {
-            console.error("Целевой слайд не найден для индекса:", currentSlide);
+        if (!targetContainer) {
+            console.error("Целевой контейнер слайда не найден для индекса:", currentSlide);
             return;
         }
 
-        console.log("Целевой слайд для заполнения: (SRC: ${targetSlide.getAttribute('src')})"); // Отладка
+        console.log("Целевой контейнер слайда для заполнения:", targetContainer); // Отладка
 
         fillInterval = setInterval(() => {
             progress += increment;
             if (progress >= 100) {
                 progress = 100;
-                console.log("Заполнение слайда", currentSlide + 1, "завершено. (SRC: ${targetSlide.getAttribute('src')})"); // Отладка
+                console.log("Заполнение слайда", currentSlide + 1, "завершено.");
                 clearInterval(fillInterval);
                 fillInterval = null;
                 targetBar.style.setProperty('--progress-width', '100%');
                 setTimeout(() => {
-                    console.log("setTimeout сработал, вызываем goToNextSlide"); // Отладка
+                    console.log("setTimeout сработал, вызываем goToNextSlide");
                     goToNextSlide();
                 }, 100);
             } else {
@@ -170,20 +199,15 @@ document.addEventListener('DOMContentLoaded', function() {
     rightArrow.addEventListener('click', goToNextSlide);
 
     // --- ФУНКЦИИ И ОБРАБОТЧИКИ ДЛЯ КНОПОК ---
-
-    // Кнопка "Новостройки"
-    if (myButton) { // Проверяем, существует ли элемент
+    // (Логика для кнопок остается без изменений)
+    if (myButton) {
         myButton.addEventListener('click', function() {
-          // Открываем новую вкладку с указанным URL
-          // Замените 'https://www.novostroyki-real-site.com/' на нужный адрес
           window.open('https://www.novostroyki-real-site.com/', '_blank');
         });
 
-        // (Опционально) Обработчик для Enter или Space, если элемент в фокусе
         myButton.addEventListener('keydown', function(event) {
             if (event.key === 'Enter' || event.key === ' ') {
-                event.preventDefault(); // Предотвращаем прокрутку при Space
-                // Открываем новую вкладку при нажатии Enter или Space
+                event.preventDefault();
                 window.open('https://www.novostroyki-real-site.com/', '_blank');
             }
         });
@@ -191,19 +215,14 @@ document.addEventListener('DOMContentLoaded', function() {
         console.warn("Кнопка .one-buttom-left не найдена в DOM.");
     }
 
-    // Кнопка "Ипотека"
-    if (myRightButton) { // Проверяем, существует ли элемент
+    if (myRightButton) {
         myRightButton.addEventListener('click', function() {
-          // Открываем новую вкладку с указанным URL для второй кнопки
-          // Замените 'https://www.ipoteka-real-site.com/' на нужный адрес
           window.open('https://www.ipoteka-real-site.com/', '_blank');
         });
 
-        // (Опционально) Обработчик для Enter или Space для второй кнопки, если элемент в фокусе
         myRightButton.addEventListener('keydown', function(event) {
             if (event.key === 'Enter' || event.key === ' ') {
-                event.preventDefault(); // Предотвращаем прокрутку при Space
-                // Открываем новую вкладку при нажатии Enter или Space для второй кнопки
+                event.preventDefault();
                 window.open('https://www.ipoteka-real-site.com/', '_blank');
             }
         });
@@ -211,19 +230,14 @@ document.addEventListener('DOMContentLoaded', function() {
         console.warn("Кнопка .one-buttom-right не найдена в DOM.");
     }
 
-    // Кнопка "Подробнее"
-    if (myBottomButton) { // Проверяем, существует ли элемент
+    if (myBottomButton) {
         myBottomButton.addEventListener('click', function() {
-          // Открываем новую вкладку с указанным URL для кнопки "Подробнее"
-          // Замените 'https://www.podrobnee-real-site.com/' на нужный адрес
           window.open('https://www.podrobnee-real-site.com/', '_blank');
         });
 
-        // (Опционально) Обработчик для Enter или Space для кнопки "Подробнее", если элемент в фокусе
         myBottomButton.addEventListener('keydown', function(event) {
             if (event.key === 'Enter' || event.key === ' ') {
-                event.preventDefault(); // Предотвращаем прокрутку при Space
-                // Открываем новую вкладку при нажатии Enter или Space для кнопки "Подробнее"
+                event.preventDefault();
                 window.open('https://www.podrobnee-real-site.com/', '_blank');
             }
         });

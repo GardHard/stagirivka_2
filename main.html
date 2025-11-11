@@ -26,15 +26,16 @@
 
                         <div class="one-text-left-botton"> 
 
-                            <div class="one-buttom-left" tabindex="0">
+                           <button type="button" class="one-buttom-left" tabindex="0">
                                 <span>Новостройки</span>
                                 <img src="image/Strelka.knopka.svg" alt="Стрелка">
-                            </div>
+                           </button>
 
-                            <div class="one-buttom-right">
+                            
+                            <button type="button" class="one-buttom-right" tabindex="0">
                                 <span>Ипотека</span>
                                 <img src="image/Strelka.knopka.svg" alt="Стрелка">
-                            </div>
+                            </button>
 
                         </div>
 
@@ -49,9 +50,9 @@
                             Купите жильё с поддержкой от государства
                         </div>
 
-                        <div class="one-buttom-bottom-left" tabindex="0">
+                        <button type="button" class="one-buttom-bottom-left" tabindex="0">
                             <span class="one-buttem-bottem-left-text">Подробнее</span>
-                        </div>
+                        </button>
 
                     </div>
 
@@ -70,23 +71,76 @@
 
                     <div class="one-block-two-center">
                             
-                        <div class="one-block-two-center-left">
-                            <img src="image/strelka slayder.svg" alt="Стрелка" class="one-block-two-center-photo-left">
+                        <div class="one-block-two-center-strelka-left-pos">
+                            <button type="button" class="one-block-two-center-left" aria-label="Следующий слайд">
+                                <img src="image/strelka slayder.svg" alt="Стрелка" class="one-block-two-center-photo-left">
+                            </button>
                         </div>
 
-                        <div class="one-block-two-center-right">
-                            <img src="image/strelka slayder.svg" alt="Стрелка" class="one-block-two-center-photo-right">
+                        <div class="one-block-two-center-strelka-right-pos">
+                            <button type="button" class="one-block-two-center-right" aria-label="Следующий слайд">
+                                <img src="image/strelka slayder.svg" alt="Стрелка" class="one-block-two-center-photo-right">
+                            </button>   
                         </div>
 
                     </div>
 
-                    <div class="one-block-two-bottom">
+                <div class="one-block-two-bottom">
 
-                        <div class="one-block-two-bottom-left"> 
-                            <div class="one-block-bottom-two-up-text">Жилой дом в 604-квартале</div>
-                            <div class="one-block-bottom-two-bottom-text">Благовещенск, 604 квартал, на берегу р. Амур</div>
                         
-                                <!-- Прогресс-бары -->
+                    <div class="one-block-two-bottom-left"> 
+
+                        <div class="one-photo-container">
+                            <!-- 1. Фотография (самый низкий z-index) -->
+                            <img src="image/Img.png" alt="Первая" class="one-photo-slider visible">
+                            <!-- 2. Градиент (выше фотографии, но ниже текста) -->
+                            <img src="image/Gradient color layer.png" alt="градиент" class="one-photo-gradient">
+                            <!-- 3. Текст (самый высокий z-index) -->
+                            <div class="one-block-bottom-two-up-text-position-1">
+                                <div class="one-block-bottom-two-up-text">Жилой дом в 604-квартале</div>
+                                <div class="one-block-bottom-two-bottom-text">Благовещенск, 604 квартал, на берегу р. Амур</div>
+                            </div>
+                        </div>
+
+                        <div class="one-photo-container">
+                            <img src="image/Img2.png" alt="Вторая" class="one-photo-slider">
+                            <img src="image/Gradient color layer.png" alt="градиент" class="one-photo-gradient">
+                            <div class="one-block-bottom-two-up-text-position-2">
+                                <div class="one-block-bottom-two-up-text">Частный дом в Верх-Благовещенске</div>
+                                <div class="one-block-bottom-two-bottom-text">Благовещенск, ул.Ленина 132</div>
+                            </div>
+                        </div>
+
+                        <div class="one-photo-container">
+                            <img src="image/Img3.png" alt="Третья" class="one-photo-slider">
+                            <img src="image/Gradient color layer.png" alt="градиент" class="one-photo-gradient">
+                            <div class="one-block-bottom-two-up-text-position-3">
+                                <div class="one-block-bottom-two-up-text">Частный район, Новостройки</div>
+                                <div class="one-block-bottom-two-bottom-text">Благовещенск, ул.Калинина 159</div>
+                            </div>
+                        </div>
+
+                        <div class="one-photo-container">
+                            <img src="image/Img4.png" alt="Четвертая" class="one-photo-slider">
+                            <img src="image/Gradient color layer.png" alt="градиент" class="one-photo-gradient">
+                            <div class="one-block-bottom-two-up-text-position-4">
+                                <div class="one-block-bottom-two-up-text">Район Чигири, частный район</div>
+                                <div class="one-block-bottom-two-bottom-text">Чигири, ул.Островского 13</div>
+                            </div>
+                        </div>
+
+
+                        <div class="one-block-two-bottom-right">
+                            <button type="button" class="one-block-two-bottom-right-krug" id="myButton">
+                                <img src="image/Strelka.knopka.svg" alt="Стрелка" class="one-block-two-bottom-right-strelka">
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                            <!-- Прогресс-бары -->
                     <div class="one-photo-taimer-animate">
                         <div class="one-photo-taimer-animate-row">
                             <div class="one-photo-taimer-animate-companent-one"></div>
@@ -96,31 +150,7 @@
                         </div>
                     </div>
 
-
-                        </div>
-
-                        <div class="one-block-two-bottom-right">
-                            <!-- Оберните кнопку в div, если нужно для позиционирования -->
-                            <button type="button" class="one-block-two-bottom-right-krug" id="myButton">
-                                <img src="image/Strelka.knopka.svg" alt="Стрелка" class="one-block-two-bottom-right-strelka">
-                            </button>
-                        </div>
-
-                    </div>
-
-                    <img src="image/Gradient color layer.png" alt="градиент" class="one-photo-gradient">
-
-                    <!-- Контейнер для изображений -->
-                    <div class="slider-container">
-                        <img src="image/Img.png" alt="Первая" class="one-photo-slider visible">
-                        <img src="image/Img2.png" alt="Вторая" class="one-photo-slider">
-                        <img src="image/Img3.png" alt="Третья" class="one-photo-slider">
-                        <img src="image/Img4.png" alt="Четвертая" class="one-photo-slider">
-                    </div>
-                    
-                
-
-                
+                  
 
                 </div>
 
