@@ -742,11 +742,270 @@
     display: none;
 }
  
+/*================================================================
+==================================================================
+==================================================================
+..................................................................
+............................00....00....00........................
+............................00....00....00........................
+............................00....00....00........................
+............................00....00....00........................
+............................00....00....00........................
+............................00....00....00........................
+............................00....00....00........................
+............................00....00....00........................
+............................00....00....00........................
+............................00....00....00........................
+............................00....00....00........................
+............................00....00....00........................
+=================================================================
+=================================================================
+=================================================================*/
+
+.three{
+    position: relative;
+    width: auto;
+    height: auto;
+    margin-top: 100px;
+    right: 300px;
+}
+.three-center{
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.three-center-one{
+    width: auto;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+}
+.three-center-one-text-up{
+    position: relative;
+    width: auto;
+    height: auto;
+    font-family: 'Roboto Flex';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.15px;
+    color: #007BFF;
+    font-stretch: 120;
+    font-variation-settings: 'GRAD' 0, 'slnt' 0, 'XTRA' 468, 'XOPQ' 96, 'YOPQ' 79, 'YTLC' 514, 'YTUC' 712, 'YTAS' 750, 'YTDE' -203, 'YTFI' 738;
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+.three-center-one-text-center{
+    /* Text */
+    width: 450px;
+    height: auto;
+    /* Display/Medium */
+    font-family: 'Roboto Flex';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 60px;
+    /* Secondary/600 */
+    color: #243048;
+    font-stretch: 120;
+    font-variation-settings: 'GRAD' 0, 'slnt' 0, 'XTRA' 468, 'XOPQ' 96, 'YOPQ' 79, 'YTLC' 514, 'YTUC' 712, 'YTAS' 750, 'YTDE' -203, 'YTFI' 738;
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+    margin-top: 10px;
+}
+.three-center-one-text-botten {
+    /* Убираем position: relative; и top */
+    position: absolute;
+    width: 424px; /* Оставляем, если нужно ограничить ширину */
+    height: auto;
+    padding-top: 290px;
+    /* Body/Regular/Medium */
+    font-family: 'Roboto Flex';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    /* or 150% */
+    letter-spacing: 0.15px;
+    /* Secondary/600 */
+    color: #243048;
+    font-stretch: 120;
+    font-variation-settings: 'GRAD' 0, 'slnt' 0, 'XTRA' 468, 'XOPQ' 96, 'YOPQ' 79, 'YTLC' 514, 'YTUC' 712, 'YTAS' 750, 'YTDE' -203, 'YTFI' 738;
+
+    /* Опционально: добавьте отступ сверху, если нужно расстояние от предыдущего элемента */
+    /* margin-top: 20px; */
+}
+.three-center-two-photo{
+    position: absolute;
+    width: auto;
+    height: auto;
+    z-index: 0;
+}
+.three-center-two{
+    width: 648px;
+    height: 460px;
+    display: flex;
+    flex-direction: column;
+}
+.three-center-two-photo-two{
+    position: absolute;
+    width: auto;
+    height: auto;
+    z-index: 1;
+}
+.three-center-two-text-up{
+    position: relative;
+width: 428px;
+height: auto;
+
+/* Display/Small */
+font-family: 'Roboto Flex';
+font-style: normal;
+font-weight: 500;
+font-size: 36px;
+line-height: 44px;
+/* or 122% */
+
+/* White */
+color: #FFFFFF;
+font-stretch: 120;
+font-variation-settings: 'GRAD' 0, 'slnt' 0, 'XTRA' 468, 'XOPQ' 96, 'YOPQ' 79, 'YTLC' 514, 'YTUC' 712, 'YTAS' 750, 'YTDE' -203, 'YTFI' 738;
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+margin-top: 20px;
+margin-left: 32px;
+
+}
+
+.three-center-two-bottem{
+    position: relative;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+}
+.three-center-two-bottem-buttem{
+position: absolute;
+width: 200px;
+height: 124px;
+top: 190px;
+left: 32px;
+bottom: 32px;
+background: #007BFF;
+border-radius: 12px;
+z-index: 2;
+
+}
+.three-center-two-bottem-buttem-text{
+    /* Подробнее */
+
+position: absolute;
+width: 80px;
+height: 20px;
+left: 12px;
+top: 12px;
+
+/* Body/Regular/Md/Small */
+font-family: 'Roboto Flex';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 20px;
+/* identical to box height, or 143% */
+letter-spacing: 0.15px;
+
+/* White */
+color: #FFFFFF;
+font-stretch: 120;
+font-variation-settings: 'GRAD' 0, 'slnt' 0, 'XTRA' 468, 'XOPQ' 96, 'YOPQ' 79, 'YTLC' 514, 'YTUC' 712, 'YTAS' 750, 'YTDE' -203, 'YTFI' 738;
+}
+.three-center-two-bottem-buttem-krug {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    right: 12px;
+    bottom: 12px;
+    background: #FFFFFF;
+    border-radius: 100px;
+    border: none; /* Убираем границу по умолчанию у кнопки */
+    cursor: pointer;
+    transition: transform 0.1s ease; /* Плавный переход для эффекта масштабирования */
+    display: flex; /* Используем flexbox для центрирования иконки */
+    align-items: center; /* Центрируем по вертикали */
+    justify-content: center; /* Центрируем по горизонтали */
+    
+}
+
+.three-center-two-bottem-buttem-krug:hover {
+    transform: scale(1.05); /* Лёгкое увеличение при наведении (опционально) */
+}
+
+.three-center-two-bottem-buttem-krug:active {
+    transform: scale(1.1); /* Увеличение при нажатии */
+}
+
+.knopka-icon {
+    width: 16px; /* Установите желаемый размер иконки */
+    height: 12px;
+    pointer-events: none; /* Иконка не будет мешать кликам по кнопке */
+}
+
+/* Icon Button Base */
+.three-center-two-bottem-buttem-krug-two {
+    /* Auto layout */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 10px; /* Это расстояние между элементами, если бы их было несколько */
+    border-color: #FFFFFF;
+    border-radius: 20px;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: 576px;
+    top: 270px;
+    z-index: 3;
+    /* Убираем встроенные стили кнопки */
+    border: none;
+    cursor: pointer;
+    /* Добавляем плавный переход для transform */
+    transition: transform 0.1s ease;
+}
 
 
+/* Стили при наведении */
+.three-center-two-bottem-buttem-krug-two:hover {
+    transform: scale(1.05); /* Лёгкое увеличение при наведении */
+}
 
+/* Стили при нажатии */
+.three-center-two-bottem-buttem-krug-two:active {
+    transform: scale(1.1); /* Увеличение при нажатии */
+}
 
+.knopka-icon-two {
+    /* Vector */
+    position: absolute;
+    /* Secondary/600 */
 
+    /* Убираем pointer-events, чтобы клики проходили через иконку к кнопке */
+    pointer-events: none;
+}
 /*================================================================
 ==================================================================
 ==================================================================
@@ -1089,7 +1348,6 @@
     width: 120px;
     height: 20px;
     background-color: #FFFFFF;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1099,18 +1357,16 @@
     cursor: pointer; /* Курсор в виде указателя */
     /* (Опционально) Добавим плавный переход для визуального эффекта */
     transition: transform 0.1s ease, box-shadow 0.1s ease, background-color 0.1s ease;
+    border: none;
 }
 
 /* (Опционально) Стили при наведении */
 .five-center-text-butten:hover {
     transform: scale(1.05); /* Лёгкое увеличение */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25); /* Более выраженная тень */
-    background-color: #f0f0f0; /* Лёгкое изменение фона */
 }
 
 /* (Опционально) Стили при фокусе (для доступности) */
 .five-center-text-butten:focus {
-    outline: 2px solid #1D263A; /* Показывает, что элемент в фокусе */
     outline-offset: 2px;
 }
 
@@ -1164,7 +1420,6 @@
     width: 63px;
     height: 20px;
     background-color: #243048;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1174,12 +1429,12 @@
     cursor: pointer; /* Курсор в виде указателя */
     /* (Опционально) Добавим плавный переход для визуального эффекта */
     transition: transform 0.1s ease, box-shadow 0.1s ease, background-color 0.1s ease;
+    border: none;
 }
 
 /* (Опционально) Стили при наведении */
 .five-center-text-butten-two:hover {
     transform: scale(1.05); /* Лёгкое увеличение */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25); /* Более выраженная тень */
    
 }
 
@@ -1192,7 +1447,6 @@
 /* (Опционально) Стили при нажатии */
 .five-center-text-butten-two:active {
     transform: scale(0.98); /* Лёгкое уменьшение при нажатии */
-    background-color: #1a2230; /* Изменение фона при нажатии */
 }
 
 .five-center-text-butten-two-text {
@@ -1213,7 +1467,6 @@
     width: 63px;
     height: 20px;
     background-color: #243048;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1222,12 +1475,12 @@
     right: 140px;
     cursor: pointer; /* Курсор в виде указателя */
     /* (Опционально) Добавим плавный переход для визуального эффекта */
+    border: none;
     transition: transform 0.1s ease, box-shadow 0.1s ease, background-color 0.1s ease;
 }
 /* (Опционально) Стили при наведении */
 .five-right-text-butten-two:hover {
     transform: scale(1.05); /* Лёгкое увеличение */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25); /* Более выраженная тень */
 
 }
 
@@ -1240,7 +1493,6 @@
 /* (Опционально) Стили при нажатии */
 .five-right-text-butten-two:active {
     transform: scale(0.98); /* Лёгкое уменьшение при нажатии */
-    background-color: #1a2230; /* Изменение фона при нажатии */
 }
 
 .five-center-right-text-up{
@@ -1286,29 +1538,28 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     cursor: pointer; /* Курсор в виде указателя */
     /* (Опционально) Добавим плавный переход для визуального эффекта */
     transition: transform 0.1s ease, box-shadow 0.1s ease, background-color 0.1s ease;
+    border: none;
 }
 
 /* (Опционально) Стили при наведении */
 .five-bottom-butten:hover {
     transform: scale(1.02); /* Лёгкое увеличение */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25); /* Более выраженная тень */
-
+    outline: none;
 }
 
 /* (Опционально) Стили при фокусе (для доступности) */
 .five-bottom-butten:focus {
-    outline: 2px solid #243048; /* Показывает, что элемент в фокусе */
     outline-offset: 2px;
+    outline: none;
 }
 
 /* (Опционально) Стили при нажатии */
 .five-bottom-butten:active {
     transform: scale(0.98); /* Лёгкое уменьшение при нажатии */
-    background-color: #e0e0e0; /* Изменение фона при нажатии */
+    outline: none;
 }
 
 .five-bottom-butten-text {
@@ -1325,6 +1576,7 @@
     /* Убираем margin и padding по умолчанию, если нужно */
     margin: 0;
     padding: 0;
+    outline: none;
 }
 
 
