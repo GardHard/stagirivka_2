@@ -1,0 +1,2573 @@
+/*================================================================
+==================================================================
+==================================================================
+..................................................................
+.........000000.........0......0.....0.....0......................
+........0......0.......0.......0.....0.....0......................
+........0......0......0........0.....0.....0......................
+........0......0.....0.........0.....0.....0......................
+........0......0....0..........0.....0.....0......................
+........0......0...0..0000.....0.....0.....0......................
+........0......0...0......0....0.....0.....0......................
+........0......0...0......0....0.....0.....0......................
+........0......0...0......0....000000000000000....................
+........0......0...0......0..................0....................
+.........000000.....000000...................0....................
+..................................................................
+=================================================================
+=================================================================
+=================================================================*/
+
+
+.bg{
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+     background-color: rgb(228, 228, 228);;
+}
+
+
+.headed{
+    position: relative;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    height: 92px;
+    background-color: white;
+}
+
+
+/*================================================================
+==================================================================
+==================================================================
+.............................................................
+............................0................................
+............................0................................
+............................0................................
+............................0................................
+............................0................................
+............................0................................
+............................0................................
+............................0................................
+............................0................................
+............................0................................
+............................0................................
+.............................................................
+=================================================================
+=================================================================
+=================================================================*/
+
+.one-center{
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.one-up-content{
+    position: relative;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-self: center;
+}
+
+.one-block-left{
+    position: relative;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-self: center;
+    overflow: hidden;
+    z-index: 2;
+}
+
+
+
+.one-up-left{
+    position: relative;
+    width: 652px;
+    height: 318px;
+    background-color: white;
+    border-radius: 20px;
+    margin-top: 30px;
+    
+}
+.one-text-left-up{
+    position: relative;
+    width: auto;
+    height: auto;
+    font-size: 48px;
+    font-weight: 500; 
+    font-family: "Roboto Flex", sans-serif;
+    text-align: left; 
+    margin-left: 20px;
+    margin-top: 30px;
+    margin-right: 100px;
+    color: #243048; 
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.one-vstavka{
+    position: relative;
+    width: auto;
+    height: auto;
+    font-size: 48px;
+    font-weight: 700; 
+    font-family: "Roboto Flex", sans-serif;
+    text-align: left; 
+    color: #007BFF; 
+    top: 110px;
+    right: 220px;
+}
+
+.one-text-left-botton{
+    position: relative;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    
+  
+}
+
+.one-buttom-left {
+    position: relative;
+    width: 163px;              
+    height: 44px;            
+    border-radius: 100px;    
+    background-color: #FFFFFF;
+    border: 1px solid #E9EAED;
+    display: flex;             
+    align-items: center;      
+    justify-content: center;   
+    text-align: center;        
+    cursor: pointer;          
+    margin-left: 20px;
+    transition: transform 0.1s ease, box-shadow 0.1s ease, border-color 0.1s ease;
+       /* Убираем возможную стилизацию по умолчанию */
+    font: inherit;
+    color: inherit;
+}
+
+.one-buttom-left:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+
+
+
+.one-buttom-left:active {
+    transform: scale(0.98); 
+    outline: none; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+.one-buttom-left span {
+    position: relative;
+    width: auto;              
+    height: auto; 
+    white-space: nowrap;      
+    order: 1;   
+    font-size: 14px;
+    font-weight: 700;
+    font-family: "Roboto Flex", sans-serif;
+    color: #1D263A;
+    text-align: left; 
+}
+
+
+.one-buttom-left img {
+    position: relative;
+    width: 16px;               
+    height: 16px;            
+    order: 2;                
+    margin-left: 10px;
+}
+
+/* --- ПРАВАЯ КНОПКА --- */
+
+.one-buttom-right {
+    position: relative;
+    width: 136px;              
+    height: 44px;             
+    border-radius: 20px;       
+    background-color: #FFFFFF; 
+    border: 1px solid #E9EAED;
+    border-radius: 100px;
+    display: flex;            
+    align-items: center;     
+    justify-content: center;  
+    text-align: center;      
+    cursor: pointer;         
+    margin-left: 20px;
+    transition: transform 0.1s ease, box-shadow 0.1s ease, border-color 0.1s ease;
+}
+
+
+.one-buttom-right:hover {
+    transform: scale(1.02); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+
+
+.one-buttom-right:active {
+    transform: scale(0.98); 
+    outline: none; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+}
+
+
+.one-buttom-right span {
+    position: relative;
+    width: auto;               
+    height: auto; 
+    white-space: nowrap;      
+    order: 1;   
+    font-size: 16px;
+    font-weight: 600; 
+    font-family: "Roboto Flex", sans-serif;
+    color: #243048;
+    text-align: left; 
+}
+
+
+.one-buttom-right img {
+    position: relative;
+    width: 16px;              
+    height: 16px;             
+    order: 2;                 
+    margin-left: 20px;
+}
+
+.one-bottom-left{
+    position: relative;
+    width: 652px;
+    height: 318px;
+    background-color: #243048;
+    border-radius: 20px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.one-bottom-text-up{
+    position: relative;
+    width: auto;
+    height: auto;
+    font-size: 36px;
+    font-weight: 500; 
+    font-family: "Roboto Flex", sans-serif;
+    color: #FFFFFF;
+    text-align: left; 
+    margin-top: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+    
+}
+
+.one-bottom-text-center{
+    width: auto;
+    height: auto;
+    font-size: 18px;
+    font-weight: 500; 
+    font-family: "Roboto Flex", sans-serif;
+    color: #7C8391;
+    text-align: left; 
+    margin-top: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.one-buttom-bottom-left {
+    width: 130px;              
+    height: 48px;             
+    background-color: #FFFFFF; 
+    border: none;              
+    display: flex;             
+    align-items: center;     
+    justify-content: center;   
+    text-align: center;        
+    font-size: 16px;          
+    cursor: pointer;          
+    box-sizing: border-box;    
+    border-radius: 20px;       
+    border: 2px solid #E9EAED; 
+    margin-left: 20px;
+    margin-top: 80px;
+
+    transition: transform 0.1s ease, box-shadow 0.1s ease, border-color 0.1s ease;
+}
+
+.one-buttom-bottom-left:hover {
+    transform: scale(1.02); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25); 
+    border-color: #243048; 
+}
+
+
+.one-buttom-bottom-left:focus {
+    outline: 2px solid #243048; 
+    outline-offset: 2px;
+}
+
+
+.one-buttom-bottom-left:active {
+    transform: scale(0.98); 
+    border-color: #243048; 
+}
+
+.one-buttem-bottem-left-text{
+    width: auto;
+    height: auto;
+    font-size: 16px;
+    font-weight: 700; 
+    font-family: "Roboto Flex", sans-serif;
+    color: #243048;
+    text-align: left; 
+}
+
+.one-block-two{
+    position: relative;
+    width: 652px;
+    height: 652px;
+    background-color: white;
+    border-radius: 20px;
+    margin-left: 20px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.one-block-two-up{
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    z-index: 3;
+    top: -200px;
+}
+
+
+
+
+
+.one-block-two-up-text{
+    width: 80px;
+    height: auto;
+    font-size: 12px;
+    font-weight: 500; 
+    font-family: "Roboto Flex", sans-serif;
+    color: #ffffff;
+    text-align: left; 
+    display: flex;
+    align-items: center;
+    padding-top: 6px;    
+    justify-content: center;
+    z-index: 2;
+}
+
+.one-block-two-center{
+    position: relative;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    z-index: 3;
+    top: 20px;
+}
+.one-block-two-center-strelka-right-pos{
+    position: relative;
+    left: 278px;
+}
+.one-block-two-center-left{
+    position: relative;
+    width: 48px;
+    height: 64px;
+    background-color: #243048;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.7;
+    z-index: 2;
+    outline: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.one-block-two-center-photo-left{
+    position: relative;
+    width: auto;
+    height: auto;
+    z-index: 2;
+}
+
+.one-block-two-center-strelka-left-pos{
+    position: relative;
+    right: 278px;
+}
+.one-block-two-center-right{
+    position: relative;
+    width: 48px;
+    height: 64px;
+    background-color: #243048;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.7;
+    z-index: 2;
+    outline: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.one-block-two-center-photo-right{
+    position: relative;
+    width: auto;
+    height: auto;
+    transform: rotate(180deg);
+    z-index: 2;
+}
+.one-block-two-bottom{
+    position: relative;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    margin-top: 0px;
+    top: 150px;
+    right: 100px;
+    z-index: 2;
+}
+
+    /* Обертка для каждого слайда (картинка + текст) */
+.one-photo-container {
+    position: relative;
+    width: auto;
+    height: auto; /* Или фиксированная высота, если у вас есть */
+    display: block; /* Или flex, в зависимости от контекста */
+}
+
+.one-block-two-bottom-left{
+    position: relative;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+    
+}
+/* Общие стили для текстовых блоков */
+/* Общие стили для текстовых блоков */
+.one-block-bottom-two-up-text-position-1,
+.one-block-bottom-two-up-text-position-2,
+.one-block-bottom-two-up-text-position-3,
+.one-block-bottom-two-up-text-position-4 {
+    position: absolute; /* Теперь они позиционируются относительно .one-photo-container */
+    top: -20px; /* Пример отступа сверху */
+    left: -150px; /* Пример отступа слева */
+    /* z-index: 10; - УБРАНО, будет задаваться в JS */
+    opacity: 0; /* По умолчанию скрыты */
+    transition: opacity 0.5s ease; /* Плавность появления/исчезновения */
+    z-index: 3; /* Выше градиента */
+}
+
+
+
+/* Стиль для активного (видимого) текстового блока */
+/* Нужно будет переключать этот класс в JS */
+.one-photo-container.active .one-block-bottom-two-up-text-position-1,
+.one-photo-container.active .one-block-bottom-two-up-text-position-2,
+.one-photo-container.active .one-block-bottom-two-up-text-position-3,
+.one-photo-container.active .one-block-bottom-two-up-text-position-4 {
+    opacity: 1; /* Делаем видимым */
+}
+.one-block-bottom-two-up-text{
+    position: relative;
+    width: 400px;
+    height: auto;
+    font-size: 30px;
+    font-weight: 500;
+    font-family: "Roboto Flex", sans-serif;
+    color: #ffffff;
+    text-align: left; 
+    margin-bottom: 15px;
+    
+}
+
+.one-photo-slider{
+    width: auto;
+    height: auto;
+    object-fit: cover; /* Или fill, contain, в зависимости от нужного поведения */
+    opacity: 0;
+    transition: opacity 0.5s ease; /* Плавность переключения */
+    position: absolute; /* Чтобы картинки лежали друг над другом */
+    top: -490px;
+    left: -205px;
+    z-index: 1;
+    pointer-events: none;
+}
+/* Класс для видимого слайда */
+.one-photo-slider.visible {
+    pointer-events: auto;
+    opacity: 1;
+}
+
+
+.one-block-bottom-two-bottom-text{
+    position: relative;
+    width: 400px;
+    height: auto;
+    font-size: 16px;
+    font-weight: 500; 
+    font-family: "Roboto Flex", sans-serif;
+    color: #ffffff;
+    text-align: left; 
+}
+/* Стили для градиента (выше фотографии, но ниже текста) */
+.one-photo-gradient {
+    position: absolute;
+    width: auto;
+    height: auto;
+    top: -400px;
+    left: -205px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    /* УСТАНАВЛИВАЕМ z-index ВСЕГДА, НЕ ТОЛЬКО ДЛЯ АКТИВНОГО */
+    z-index: 2; /* Выше фотографии (z-index: 1), но ниже текста (z-index: 3) */
+    /* top, left, right, bottom - нужно указать для позиционирования */
+    object-fit: cover; /* Или fill, contain, в зависимости от нужного поведения */
+}
+
+.one-block-two-bottom-right{
+    position: relative;
+    width: auto;
+    height: auto;
+    left: 525px;
+    top: 50px;
+}
+
+
+.one-block-two-bottom-right-krug {
+  position: relative; 
+  width: 40px;
+  height: 40px;
+  background-color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 40px; 
+  margin-top: 0px;
+  margin-left: 0px;
+  border: 2px solid #ccc; 
+  cursor: pointer; 
+  border: none;
+  outline: none;
+  padding: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.2s;
+}
+
+/* Стили для изображения внутри */
+.one-block-two-bottom-right-strelka {
+  width: 20px;               
+  height: 20px;            
+  object-fit: contain;     
+  pointer-events: none;          
+}
+
+
+.one-block-two-bottom-right-krug:hover {
+  background-color: #f0f0f0; 
+}
+
+
+.one-block-two-bottom-right-krug:active {
+  transform: scale(0.95);     /* Небольшое уменьшение при нажатии */
+}
+
+
+.one-photo-taimer-animate {
+    position: absolute;
+    width: auto; 
+    height: auto; 
+    display: flex;
+    left: 50px;
+    top: 590px;
+    flex-direction: row; 
+    z-index: 3;
+    box-sizing: border-box;
+}
+
+
+.one-photo-taimer-animate-companent-one,
+.one-photo-taimer-animate-companent-two,
+.one-photo-taimer-animate-companent-three,
+.one-photo-taimer-animate-companent-fore {
+    position: relative; /* Для позиционирования потомков */
+    z-index: 2;
+    width: 80px;  /* Фиксированная ширина */
+    height: 4px;  /* Фиксированная высота */
+    background-color: transparent; /* Прозрачный фон у контейнера */
+    opacity: 1;
+    flex-shrink: 0;
+    flex-grow: 0;
+    box-sizing: border-box;
+    
+   
+}
+
+.one-photo-taimer-animate-row{
+    position: relative;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+
+.one-photo-taimer-animate-companent-one::before,
+.one-photo-taimer-animate-companent-two::before,
+.one-photo-taimer-animate-companent-three::before,
+.one-photo-taimer-animate-companent-fore::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff; /* Цвет фона */
+    opacity: 0.1; /* Прозрачность фона */
+    z-index: 1;
+}
+
+/* Классы для активных полосок */
+.one-photo-taimer-animate-companent-one.active::before,
+.one-photo-taimer-animate-companent-two.active::before,
+.one-photo-taimer-animate-companent-three.active::before,
+.one-photo-taimer-animate-companent-fore.active::before {
+    opacity: 0.7; /* Фон активной полоски */
+}
+
+
+.one-photo-taimer-animate-companent-one::after,
+.one-photo-taimer-animate-companent-two::after,
+.one-photo-taimer-animate-companent-three::after,
+.one-photo-taimer-animate-companent-fore::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: var(--progress-width, 0%); /* Используем переменную из style элемента */
+    height: 100%;
+    background-color: #ffffff; /* Цвет заполнения */
+    z-index: 2;
+    opacity: 1; /* Или другое значение */
+    transition: width 0.1s linear; /* Плавный переход ширины */
+}
+
+.one-photo-slider.visible {
+    display: block; /* Показываем активное изображение */
+}
+
+
+/* Стили для стрелок */
+.one-block-two-center-left,
+.one-block-two-center-right {
+    cursor: pointer; /* Курсор в виде указателя при наведении */
+    transition: opacity 0.2s ease;
+}
+
+.one-block-two-center-left:hover,
+.one-block-two-center-right:hover {
+    opacity: 1; 
+}
+
+.one-block-two-center-photo-left,
+.one-block-two-center-photo-right {
+    pointer-events: none; /* Отключаем события мыши для изображений стрелок */
+}
+
+.slider-container {
+    position: absolute;
+    width: 100%;
+    height: 100%; /* Установите нужную высоту */
+    overflow: hidden;
+}
+
+.one-indicator-text {
+    position: absolute;
+    display: flex;
+    width: 35px;
+    height: 20px;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    align-items: center; 
+    justify-content: center; 
+    /* Скрываем по умолчанию */
+    display: none;
+}
+ 
+
+
+
+
+
+/*================================================================
+==================================================================
+==================================================================
+...............................................................
+...............00...00.....................00.....................
+...............00....00...................00......................
+...............00.....00.................00.......................
+...............00......00...............00........................
+...............00.......00.............00.........................
+...............00........00...........00..........................
+...............00.........00.........00...........................
+...............00..........00.......00............................
+...............00...........00.....00.............................
+...............00............00...00..............................
+...............00.............00.00...............................
+...............00..............000................................
+=================================================================
+=================================================================
+=================================================================*/
+
+.foure{
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-color: #ffffff;
+    margin-top: 50px;
+}
+.foure-center{
+    position: relative;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.foure-block-up{
+    position:relative ;
+    width: auto;
+    height: auto;
+    font-size: 24px;
+    font-weight: 700; 
+    font-family: "Roboto Flex", sans-serif;
+    color: #243048;
+    text-align: left; 
+    margin-top: 50px;
+    right: 575px;
+}
+.foure-block-bottom{
+    position: relative;
+    width: auto;
+    height: auto;
+    right: 625px;
+    margin-top: 20px;
+    margin-bottom: 80px;
+}
+.foure-block-bottom-buttem {
+    position: relative;
+    width: 108px;
+    height: 36px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    border: 1px solid #d8d8d8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer; /* Курсор в виде указателя */
+    /* (Опционально) Добавим плавный переход для визуального эффекта */
+    transition: transform 0.1s ease, box-shadow 0.1s ease, background-color 0.1s ease, border-color 0.1s ease;
+}
+
+/* (Опционально) Стили при наведении */
+.foure-block-bottom-buttem:hover {
+    transform: scale(1.02); /* Лёгкое увеличение */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Более выраженная тень */
+
+   
+}
+
+
+/* (Опционально) Стили при нажатии */
+.foure-block-bottom-buttem:active {
+    transform: scale(0.98); /* Лёгкое уменьшение при нажатии */
+   
+}
+
+.foure-block-bottom-buttem-text {
+    position: relative;
+    width: auto;
+    height: auto;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: "Roboto Flex", sans-serif;
+    color: #243048;
+    text-align: left; /* выравнивание текста по центру */
+    /* Убираем pointer-events, если не нужно */
+    pointer-events: none;
+    /* Убираем margin и padding по умолчанию, если нужно */
+    margin: 0;
+    padding: 0;
+}
+
+.foure-block-center{
+    position: relative;
+    width: 100%;
+    max-width: 100%; /* Установите ширину контейнера */
+    height: auto; /* Высота по содержимому */
+    overflow: hidden; /* Скрываем содержимое за пределами контейнера */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+    /* left: 220px; Убираем left, управление позицией через transform */
+    gap: 30px;
+    margin: 0 auto;
+}
+/* Обертка для блоков, которая будет двигаться */
+.foure-block-center-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 30px;
+    /* Стартовая позиция: первый блок начинается с 220px от левого края контейнера */
+    /* Это значит, что левый край первого блока должен быть в 220px */
+    /* Если ширина блока 425px, то transformX = 220px */
+    transform: translateX(220px);
+    transition: transform 0.1s ease-out; /* Плавность при отпускании */
+}
+
+.foure-block-center-one{
+    position: relative;
+    width: 425px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    /* Убираем flex-shrink, чтобы блоки не сжимались */
+    flex: 0 0 auto;
+    /* Сохраняем отступы, если они были */
+    /* gap: 30px; - убираем, т.к. отступ теперь через margin или gap на родителе */
+}
+.foure-block-center-one-photo{
+    position: relative;
+    width: auto;
+    height: auto;
+}
+.foure-one-img{
+    position: relative;
+    width: auto;
+    height: auto;
+}
+
+.foure-block-info-text{
+    position: relative;
+    width: auto;
+    height: auto;
+}
+
+.foure-block-info-text-up{
+    position: relative;
+    width: auto;
+    height: auto;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: "Roboto Flex", sans-serif;
+    color: #243048;
+    text-align: left; /* выравнивание текста по центру */
+    margin-top: 20px;
+}
+
+.foure-block-info-text-botten{
+    position: relative;
+    width: auto;
+    height: auto;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: "Roboto Flex", sans-serif;
+    color: #7C8391;
+    text-align: left; /* выравнивание текста по центру */
+    line-height: 25px;
+    margin-top: 10px;
+}
+
+
+/* Курсор при перетаскивании */
+.foure-block-center-inner.dragging {
+    cursor: grabbing;
+}
+
+.foure-block-center-inner {
+    cursor: grab;
+}
+
+.foure-block-center-inner:active {
+     cursor: grabbing;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*================================================================
+==================================================================
+==================================================================
+...............................................................
+..................00.....................00.....................
+...................00...................00......................
+....................00.................00.......................
+.....................00...............00........................
+......................00.............00.........................
+.......................00...........00..........................
+........................00.........00...........................
+.........................00.......00............................
+..........................00.....00.............................
+...........................00...00..............................
+............................00.00...............................
+.............................000................................
+=================================================================
+=================================================================
+=================================================================*/
+
+
+.five-center{
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom: 75px;
+}
+
+.five-name{
+    position: relative;
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: left;
+}
+
+.five-name-text{
+    position: relative;
+    width: auto;
+    height: auto;
+    font-size: 24px;
+    font-weight: 700; 
+    font-family: "Roboto Flex", sans-serif;
+    color: #243048;
+    text-align: center; 
+    padding-right: 1175px;
+}
+
+
+
+.five-center-left,
+.five-center-bervin,
+.five-center-right{
+    position: relative;
+    width: 424px;
+    height: 480px;
+    background-color: #FFFFFF ;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.five-center-left-text{
+    top: -150px;
+    position: relative;
+    width: 350px;
+    height: auto;
+    font-size: 20px;
+    font-weight: 700; 
+    font-family: "Roboto Flex", sans-serif;
+    color: #ffffff;
+    text-align: left;
+    line-height: 30px;
+}
+
+.five-center-text-two{
+    top: -145px;
+    position: relative;
+    width: 350px;
+    height: auto;
+    font-size: 16px;
+    font-weight: 500; 
+    font-family: "Roboto Flex", sans-serif;
+    color: #7C8391;
+    text-align: left;
+    line-height: 24px;
+}
+
+.five-center-text-butten {
+    position: relative;
+    width: 120px;
+    height: 20px;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    top: 140px;
+    right: 115px;
+    cursor: pointer; /* Курсор в виде указателя */
+    /* (Опционально) Добавим плавный переход для визуального эффекта */
+    transition: transform 0.1s ease, box-shadow 0.1s ease, background-color 0.1s ease;
+}
+
+/* (Опционально) Стили при наведении */
+.five-center-text-butten:hover {
+    transform: scale(1.05); /* Лёгкое увеличение */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25); /* Более выраженная тень */
+    background-color: #f0f0f0; /* Лёгкое изменение фона */
+}
+
+/* (Опционально) Стили при фокусе (для доступности) */
+.five-center-text-butten:focus {
+    outline: 2px solid #1D263A; /* Показывает, что элемент в фокусе */
+    outline-offset: 2px;
+}
+
+/* (Опционально) Стили при нажатии */
+.five-center-text-butten:active {
+    transform: scale(0.98); /* Лёгкое уменьшение при нажатии */
+    background-color: #e0e0e0; /* Изменение фона при нажатии */
+}
+
+.five-center-text-butten-text {
+    position: relative;
+    width: auto;
+    height: auto;
+    font-size: 12px;
+    font-weight: 700;
+    font-family: "Roboto Flex", sans-serif;
+    color: #1D263A;
+    text-align: left; /* выравнивание текста по центру */
+    pointer-events: none;
+}
+
+.five-center-center-text-up{
+    top: -130px;
+    position: relative;
+    width: 350px;
+    height: auto;
+    font-size: 20px;
+    font-weight: 700; 
+    font-family: "Roboto Flex", sans-serif;
+    color: #243048;
+    text-align: left;
+    line-height: 30px;
+}
+
+.five-center-center-text-bottom{
+    top: -125px;
+    position: relative;
+    width: 350px;
+    height: auto;
+    font-size: 16px;
+    font-weight: 500; 
+    font-family: "Roboto Flex", sans-serif;
+    color: #7C8391;
+    text-align: left;
+    line-height: 24px;
+}
+
+
+.five-center-text-butten-two {
+    position: relative;
+    width: 63px;
+    height: 20px;
+    background-color: #243048;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    top: 120px;
+    right: 140px;
+    cursor: pointer; /* Курсор в виде указателя */
+    /* (Опционально) Добавим плавный переход для визуального эффекта */
+    transition: transform 0.1s ease, box-shadow 0.1s ease, background-color 0.1s ease;
+}
+
+/* (Опционально) Стили при наведении */
+.five-center-text-butten-two:hover {
+    transform: scale(1.05); /* Лёгкое увеличение */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25); /* Более выраженная тень */
+   
+}
+
+/* (Опционально) Стили при фокусе (для доступности) */
+.five-center-text-butten-two:focus {
+    outline: 2px solid #ffffff; /* Показывает, что элемент в фокусе (белый для контраста с синим) */
+    outline-offset: 2px;
+}
+
+/* (Опционально) Стили при нажатии */
+.five-center-text-butten-two:active {
+    transform: scale(0.98); /* Лёгкое уменьшение при нажатии */
+    background-color: #1a2230; /* Изменение фона при нажатии */
+}
+
+.five-center-text-butten-two-text {
+    position: relative;
+    width: auto;
+    height: auto;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: "Roboto Flex", sans-serif;
+    color: #ffffff;
+    text-align: left; /* выравнивание текста по центру */
+    /* Убираем pointer-events, если не нужно */
+    pointer-events: none;
+}
+
+.five-right-text-butten-two {
+    position: relative;
+    width: 63px;
+    height: 20px;
+    background-color: #243048;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    top: 125px;
+    right: 140px;
+    cursor: pointer; /* Курсор в виде указателя */
+    /* (Опционально) Добавим плавный переход для визуального эффекта */
+    transition: transform 0.1s ease, box-shadow 0.1s ease, background-color 0.1s ease;
+}
+/* (Опционально) Стили при наведении */
+.five-right-text-butten-two:hover {
+    transform: scale(1.05); /* Лёгкое увеличение */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25); /* Более выраженная тень */
+
+}
+
+/* (Опционально) Стили при фокусе (для доступности) */
+.five-right-text-butten-two:focus {
+    outline: 2px solid #ffffff; /* Показывает, что элемент в фокусе (белый для контраста с синим) */
+    outline-offset: 2px;
+}
+
+/* (Опционально) Стили при нажатии */
+.five-right-text-butten-two:active {
+    transform: scale(0.98); /* Лёгкое уменьшение при нажатии */
+    background-color: #1a2230; /* Изменение фона при нажатии */
+}
+
+.five-center-right-text-up{
+    top: -130px;
+    position: relative;
+    width: 350px;
+    height: auto;
+    font-size: 20px;
+    font-weight: 700; 
+    font-family: "Roboto Flex", sans-serif;
+    color: #243048;
+    text-align: left;
+    line-height: 30px;
+}
+
+.five-center-right-text-bottom{
+    top: -120px;
+    position: relative;
+    width: 350px;
+    height: auto;
+    font-size: 16px;
+    font-weight: 500; 
+    font-family: "Roboto Flex", sans-serif;
+    color: #7C8391;
+    text-align: left;
+    line-height: 24px;
+}
+
+
+
+.five-bottom{
+    position: relative;
+    width: auto;
+    height: auto;
+    padding-top: 50px;
+}
+.five-bottom-butten {
+    position: relative;
+    width: 150px;
+    height: 48px;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    cursor: pointer; /* Курсор в виде указателя */
+    /* (Опционально) Добавим плавный переход для визуального эффекта */
+    transition: transform 0.1s ease, box-shadow 0.1s ease, background-color 0.1s ease;
+}
+
+/* (Опционально) Стили при наведении */
+.five-bottom-butten:hover {
+    transform: scale(1.02); /* Лёгкое увеличение */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25); /* Более выраженная тень */
+
+}
+
+/* (Опционально) Стили при фокусе (для доступности) */
+.five-bottom-butten:focus {
+    outline: 2px solid #243048; /* Показывает, что элемент в фокусе */
+    outline-offset: 2px;
+}
+
+/* (Опционально) Стили при нажатии */
+.five-bottom-butten:active {
+    transform: scale(0.98); /* Лёгкое уменьшение при нажатии */
+    background-color: #e0e0e0; /* Изменение фона при нажатии */
+}
+
+.five-bottom-butten-text {
+    position: relative;
+    width: auto;
+    height: auto;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: "Roboto Flex", sans-serif;
+    color: #243048;
+    text-align: left; /* выравнивание текста по центру */
+    /* Убираем pointer-events, если не нужно */
+    pointer-events: none;
+    /* Убираем margin и padding по умолчанию, если нужно */
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+
+
+
+
+
+
+/*================================================================
+==================================================================
+==================================================================
+..................................................................
+..................00.....................00.......00..............
+...................00...................00........00..............
+....................00.................00.........00..............
+.....................00...............00..........00..............
+......................00.............00...........00..............
+.......................00...........00............00..............
+........................00.........00.............00..............
+.........................00.......00..............00..............
+..........................00.....00...............00..............
+...........................00...00................00..............
+............................00.00.................00..............
+.............................000..................00..............
+=================================================================
+=================================================================
+=================================================================*/
+
+
+
+
+
+
+
+
+
+.fotter-center{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    background-color: #FFFFFF;
+    margin-top: 50px;
+    left: -10px;
+    top: 10px;
+}
+
+.fotter-one{
+    position: relative;
+    width: 100%;
+    height: 96px;
+    border-bottom: 1px solid #bcbcbc;
+}
+
+.fotter-two{
+    position: relative;
+    width: 100%;
+    height: 284px;
+    border-bottom: 1px solid #bcbcbc;
+}
+
+.fotter-three{
+    position: relative;
+    width: 100%;
+    height: 180px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*================================================================
+==================================================================
+==================================================================
+.........0000....0.....0.....0.....0.......0000000...............
+........0...0....0.....0.....0.....0......0.......0..............
+.......0....0....0.....0.....0.....0.....0.........0.............
+......0.....0....0.....0.....0.....0.....0.........0.............
+.....0......0....0.....0.....0.....0.....0.........0.............
+............0....0000000.....0000000.....0.........0.............
+............0..........0...........0.....0.........0.............
+............0..........0...........0.....0.........0.............
+............0..........0...........0.....0.........0.............
+............0..........0...........0.....0.........0.............
+............0..........0...........0.....0.........0.............
+............0..........0...........0......0.......0..............
+............0..........0...........0.......0000000...............
+=================================================================
+=================================================================
+=================================================================*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 1440px) {
+
+
+/*================================================================
+==================================================================
+==================================================================
+.............................................................
+............................0................................
+............................0................................
+............................0................................
+............................0................................
+............................0................................
+............................0................................
+............................0................................
+............................0................................
+............................0................................
+............................0................................
+............................0................................
+.............................................................
+=================================================================
+=================================================================
+=================================================================*/
+.one-block-two-up-up{
+    position: absolute;
+    width: 80px ;
+    height: 28px;
+    background-color: #243048;
+    border-radius: 20px;
+    z-index: 3;
+    left: 40px;
+    top: -40px;
+}
+.one-block-two-up-text{
+    width: 80px;
+    
+}
+
+/*================================================================
+==================================================================
+==================================================================
+...............................................................
+..................00.....................00.....................
+...................00...................00......................
+....................00.................00.......................
+.....................00...............00........................
+......................00.............00.........................
+.......................00...........00..........................
+........................00.........00...........................
+.........................00.......00............................
+..........................00.....00.............................
+...........................00...00..............................
+............................00.00...............................
+.............................000................................
+=================================================================
+=================================================================
+=================================================================*/
+
+
+
+.five-center-center{
+    position: relative;
+    width: auto;
+    height: auto;
+    gap: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+
+
+}
+.five-center-left{
+    background-color: #243048 ;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*================================================================
+==================================================================
+==================================================================
+..........0000000.......000000......0.......0....................
+.........0.......0.....0......0.....0.......0....................
+........0.........0...0.......0.....0.......0....................
+........0.........0...........0.....0.......0....................
+........0.........0..........0......0.......0....................
+.........0.......0..........0.......0.......0....................
+..........0000000..........0........000000000....................
+.........0.......0..........0...............0....................
+........0.........0..........0..............0....................
+........0.........0...........0.............0....................
+........0.........0...0.......0.............0....................
+.........0.......0.....0.....0..............0....................
+..........0000000.......00000...............0....................
+=================================================================
+=================================================================
+=================================================================*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 834px) and (max-width: 1439px) {
+    
+
+
+
+/*================================================================
+==================================================================
+==================================================================
+.............................................................
+............................0................................
+............................0................................
+............................0................................
+............................0................................
+............................0................................
+............................0................................
+............................0................................
+............................0................................
+............................0................................
+............................0................................
+............................0................................
+.............................................................
+=================================================================
+=================================================================
+=================================================================*/
+.one-up-content{
+    position: relative;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-self: center;
+}
+.one-block-two{
+    margin-left: 0px;
+    margin-top: 10px;
+}
+.one-up-left{
+    margin-top: 20px;
+}
+.one-bottom-left{
+    margin-top: 10px;
+}
+.one-block-two-up-up{
+    position: absolute;
+    width: 80px ;
+    height: 28px;
+    background-color: #243048;
+    border-radius: 20px;
+    z-index: 2;
+    left: 40px;
+    top: -40px;
+}
+.one-block-two-up-text{
+    width: 80px;
+}
+
+
+
+/*================================================================
+==================================================================
+==================================================================
+...............................................................
+...............00...00.....................00.....................
+...............00....00...................00......................
+...............00.....00.................00.......................
+...............00......00...............00........................
+...............00.......00.............00.........................
+...............00........00...........00..........................
+...............00.........00.........00...........................
+...............00..........00.......00............................
+...............00...........00.....00.............................
+...............00............00...00..............................
+...............00.............00.00...............................
+...............00..............000................................
+=================================================================
+=================================================================
+=================================================================*/
+
+
+.foure-block-up{
+    margin-top: 50px;
+    right: 270px;
+}
+
+/* Обертка для блоков, которая будет двигаться */
+.foure-block-center-inner {
+    transform: translateX(525px);
+}
+.foure-block-bottom{
+    right: 315px;
+    margin-top: 20px;
+    margin-bottom: 80px;
+}
+
+/*================================================================
+==================================================================
+==================================================================
+...............................................................
+..................00.....................00.....................
+...................00...................00......................
+....................00.................00.......................
+.....................00...............00........................
+......................00.............00.........................
+.......................00...........00..........................
+........................00.........00...........................
+.........................00.......00............................
+..........................00.....00.............................
+...........................00...00..............................
+............................00.00...............................
+.............................000................................
+=================================================================
+=================================================================
+=================================================================*/
+
+
+
+
+
+
+.five-name-text{
+    position: relative;
+    width: auto;
+    height: auto;
+    font-size: 24px;
+    font-weight: 500; 
+    font-family: "Roboto Flex", sans-serif;
+    color: #243048;
+    text-align: center; 
+    padding-right: 500px;
+}
+
+.five-center-center{
+    position: relative;
+    width: auto;
+    height: auto;
+    gap: 20px;
+    display: flex;
+    flex-direction: row;
+    padding-left: 670px;
+    padding-top: 50px;
+
+
+}
+
+.five-center-left{
+    background-color: #243048 ;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*================================================================
+==================================================================
+==================================================================
+..................................................................
+..................00.....................00.......00..............
+...................00...................00........00..............
+....................00.................00.........00..............
+.....................00...............00..........00..............
+......................00.............00...........00..............
+.......................00...........00............00..............
+........................00.........00.............00..............
+.........................00.......00..............00..............
+..........................00.....00...............00..............
+...........................00...00................00..............
+............................00.00.................00..............
+.............................000..................00..............
+=================================================================
+=================================================================
+=================================================================*/
+
+.fotter-center{
+    position: relative;
+    left: -20px;
+    top: 10px;
+    width: 120%;
+    height: auto;
+    background-color: #FFFFFF;
+    margin-top: 50px;
+}
+.fotter-one{
+    position: relative;
+    width: 100%;
+    height: 96px;
+    border-bottom: 1px solid #bcbcbc;
+}
+.fotter-two{
+    position: relative;
+    width: 100%;
+    height: 206px;
+    border-bottom: 1px solid #bcbcbc;
+}
+.fotter-three{
+    position: relative;
+    width: 100%;
+    height: 284px;
+    border-bottom: 1px solid #bcbcbc;
+}
+.fotter-foure{
+    position: relative;
+    width: 100%;
+    height: 268px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*================================================================
+==================================================================
+==================================================================
+.......000000.........00000.........000000......................
+......0......0.......0.....0.......0......0.....................
+.....0........0.....0.......0.....0........0....................
+..............0.....0.............0........0....................
+.............0......0.............0........0....................
+............0.......0.............0........0....................
+...........0........0..00000......0........0....................
+............0.......0.0.....0.....0........0....................
+.............0......0........0....0........0....................
+..............0.....0........0....0........0....................
+.....0........0.....0........0....0........0....................
+......0......0......0........0.....0......0.....................
+.......000000........00000000.......000000......................
+=================================================================
+=================================================================
+=================================================================*/
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 833px) {
+
+
+    
+
+
+
+
+
+    
+/*================================================================
+==================================================================
+==================================================================
+.............................................................
+............................0................................
+............................0................................
+............................0................................
+............................0................................
+............................0................................
+............................0................................
+............................0................................
+............................0................................
+............................0................................
+............................0................................
+............................0................................
+.............................................................
+=================================================================
+=================================================================
+=================================================================*/
+.one-up-content{
+    position: relative;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-self: center;
+}
+.one-block-left{
+    position: relative;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-self: center;
+    overflow: hidden;
+    z-index: 2;
+}
+.one-up-left{
+    width: 328px;
+    height: 234px;
+    margin-top: 30px;
+}
+.one-text-left-up{
+    width: 300px;
+    font-size: 30px;
+}
+.one-vstavka{
+    font-size: 30px;
+    top: 70px;
+    right: 125px;
+}
+.one-buttom-left {
+    width: 155px;             
+    height: 40px;   
+    margin-left: 15px;         
+}
+.one-buttom-right {
+    width: 120px;            
+    height: 40px;        
+    margin-left: 10px;    
+}
+.one-bottom-left{
+    width: 328px;
+    height: 264px;
+    margin-top: 10px;
+}
+.one-bottom-text-up{
+    font-size: 24px;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+.one-bottom-text-center{
+    width: 200px;
+    font-size: 14px;
+    margin-top: 15px;
+    margin-left: 20px;
+}
+.one-buttom-bottom-left {
+    width: 280px;             
+    height: 48px;             
+    font-size: 14px;         
+    margin-top: 30px;
+}
+.one-block-two{
+    position: relative;
+    width: 328px;
+    height: 420px;
+    border-radius: 20px;
+    margin-left: 0px;
+    margin-top: 10px;
+    z-index: 2;
+  
+}
+.one-block-two-up{
+   
+    position: relative;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0px;
+    padding-left: 0px;
+    top: -120px;
+}
+
+.one-block-two-up-up{
+    position: absolute;
+    width: 80px ;
+    height: 28px;
+    background-color: #243048;
+    border-radius: 20px;
+    z-index: 3;
+    left: 20px;
+    top: -40px;
+    margin-right: 0px;
+}
+.one-block-two-up-text{
+    width: 80px;
+}
+.one-indicator-text {
+    display: flex; /* Показываем блок как flex-контейнер */
+    top: -35px;
+    right: 20px;
+}
+#slideCounter {
+    font-size: 12px; /* Уменьшим размер шрифта */
+    font-weight: bold; /* Сделаем жирным */
+    color: #243048; /* Цвет текста */
+    margin: 0; /* Убираем отступы */
+    padding: 0; /* Убираем внутренние отступы */
+    text-align: center; /* Выравнивание по центру */
+    white-space: nowrap; /* Запрещаем перенос на новую строку */
+    pointer-events: none; /* Отключаем взаимодействие с мышью для текста */
+    line-height: 1; /* Высота строки */
+    overflow: hidden; /* Скрываем переполнение, если текст вдруг станет больше */
+    /* width: 100%; /* Опционально: занимает всю ширину родителя */
+    /* box-sizing: border-box; /* Включает padding в расчёт ширины */
+}
+
+.one-block-two-center{
+    display: none;
+}
+.one-block-two-bottom-left{
+    position: relative;
+    width: auto;
+    height: auto;
+    z-index: 2;
+    margin-top: 0px;
+    margin-left: 0px;
+    top: 115px;
+}
+.one-block-bottom-two-up-text{
+    width: 230px;
+    font-size: 24px;
+    
+}
+.one-block-bottom-two-bottom-text{
+    width: 260px;
+    font-size: 14px;
+    margin-top: 20px;
+}
+.one-photo-taimer-animate{
+    top: 390px;
+    left: 30px;
+}
+.one-photo-taimer-animate-row{
+    gap: 5px;
+    margin-top: 0px;
+}
+.one-photo-taimer-animate-companent-one,
+.one-photo-taimer-animate-companent-two,
+.one-photo-taimer-animate-companent-three,
+.one-photo-taimer-animate-companent-fore {
+    width: 24px;  
+    height: 4px;  
+}
+.one-block-two-bottom-right{
+    left: 225px;
+}
+.one-block-two-bottom-right-krug {
+ 
+  margin-top: 0px;
+  margin-left: 0px;
+  border: 2px solid #ccc; /* (Опционально) добавим границу для наглядности */
+  cursor: pointer; /* Курсор указателя */
+  /* Убираем стандартные стили кнопки */
+  border: none;
+  outline: none;
+  padding: 0;
+  /* (Опционально) добавим тень */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  /* (Опционально) добавим плавный переход */
+  transition: background-color 0.2s;
+}
+.slider-container {
+    position: absolute;
+    width: 328px;
+    height: 420px; /* Установите нужную высоту */
+    overflow: hidden;
+}
+.one-photo-slider{
+    width: 350px;
+    height: 420px;
+    top: -455px;
+    left: -50px;
+}
+
+/* Общие стили для текстовых блоков */
+/* Общие стили для текстовых блоков */
+.one-block-bottom-two-up-text-position-1,
+.one-block-bottom-two-up-text-position-2,
+.one-block-bottom-two-up-text-position-3,
+.one-block-bottom-two-up-text-position-4 {
+    top: -200px; /* Пример отступа сверху */
+    left: -10px; /* Пример отступа слева */
+}
+/* Стили для градиента (выше фотографии, но ниже текста) */
+.one-photo-gradient {
+    width: 330px;
+    height: 500px;
+    top: -500px;
+    left: -45px;
+}
+
+/*================================================================
+==================================================================
+==================================================================
+...............................................................
+...............00...00.....................00.....................
+...............00....00...................00......................
+...............00.....00.................00.......................
+...............00......00...............00........................
+...............00.......00.............00.........................
+...............00........00...........00..........................
+...............00.........00.........00...........................
+...............00..........00.......00............................
+...............00...........00.....00.............................
+...............00............00...00..............................
+...............00.............00.00...............................
+...............00..............000................................
+=================================================================
+=================================================================
+=================================================================*/
+
+
+
+.foure-center{
+    position: relative;
+    width: auto;
+    height: auto;
+    display: block;
+    flex-direction: column;
+}
+
+.foure-block-up{
+    padding-top: 25px;
+    left: 250px;
+}
+
+
+/* Обертка для блоков, которая будет двигаться */
+.foure-block-center-inner {
+    transform: translateX(735px);
+}
+.foure-block-bottom{
+    right: 0;
+    left: 250px;
+    margin-top: 0px;
+    padding-bottom: 30px;
+}
+
+/*================================================================
+==================================================================
+==================================================================
+...............................................................
+..................00.....................00.....................
+...................00...................00......................
+....................00.................00.......................
+.....................00...............00........................
+......................00.............00.........................
+.......................00...........00..........................
+........................00.........00...........................
+.........................00.......00............................
+..........................00.....00.............................
+...........................00...00..............................
+............................00.00...............................
+.............................000................................
+=================================================================
+=================================================================
+=================================================================*/
+
+
+
+
+
+.five-name-text{
+    position: relative;
+    width: auto;
+    height: auto;
+    font-size: 24px;
+    font-weight: 500; 
+    font-family: "Roboto Flex", sans-serif;
+    color: #243048;
+    text-align: center; 
+    padding-right: 175px;
+}
+
+.five-center-center{
+    position: relative;
+    width: auto;
+    height: auto;
+    gap: 20px;
+    display: flex;
+    flex-direction: row;
+    padding-left: 640px;
+    padding-top: 50px;
+
+
+}
+
+
+
+.five-center-left,
+.five-center-bervin,
+.five-center-right{
+    position: relative;
+    width: 298px;
+    height: 424px;
+    background-color: #FFFFFF ;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.five-center-text-butten{
+    position: relative;
+    width: 120px;
+    height: 20px;
+    background-color: #243048;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    top: 100px;
+    right: 60px;
+}
+
+
+.five-center-text-butten-text{
+    font-size: 12px;
+    font-weight: 500; 
+    color: #ffffff;
+}
+
+.five-center-left-text{
+    top: -110px;
+    padding-left: 10px;
+    position: relative;
+    width: 250px;
+    height: auto;
+    font-size: 20px;
+    font-weight: 500; 
+    font-family: "Roboto Flex", sans-serif;
+    color: #243048;
+    text-align: left;
+    line-height: 30px;
+}
+
+.five-center-text-two{
+    top: -100px;
+    padding-left: 10px;
+    position: relative;
+    width: 250px;
+    height: auto;
+    font-size: 16px;
+    font-weight: 500; 
+    font-family: "Roboto Flex", sans-serif;
+    color: #7C8391;
+    text-align: left;
+    line-height: 20px;
+}
+
+.five-center-center-text-up{
+    top: -70px;
+    left: 10px;
+    position: relative;
+    width: 250px;
+    height: auto;
+    font-size: 20px;
+    font-weight: 500; 
+    font-family: "Roboto Flex", sans-serif;
+    color: #243048;
+    text-align: left;
+    line-height: 28px;
+}
+
+
+.five-center-center-text-bottom{
+    top: -60px;
+    left: 10px;
+    position: relative;
+    width: 250px;
+    height: auto;
+    font-size: 16px;
+    font-weight: 500; 
+    font-family: "Roboto Flex", sans-serif;
+    color: #7C8391;
+    text-align: left;
+    line-height: 24px;
+}
+.five-center-text-butten-two{
+    top: 60px;
+    right: 90px;
+}
+
+
+.five-center-right-text-up{
+    top: -85px;
+    width: 250px;
+    line-height: 30px;
+}
+
+
+
+.five-center-right-text-bottom{
+    top: -70px;
+    width: 250px;
+}
+
+
+.five-right-text-butten-two{
+    top: 70px;
+    right: 90px;
+}
+
+
+/*================================================================
+==================================================================
+==================================================================
+..................................................................
+..................00.....................00.......00..............
+...................00...................00........00..............
+....................00.................00.........00..............
+.....................00...............00..........00..............
+......................00.............00...........00..............
+.......................00...........00............00..............
+........................00.........00.............00..............
+.........................00.......00..............00..............
+..........................00.....00...............00..............
+...........................00...00................00..............
+............................00.00.................00..............
+.............................000..................00..............
+=================================================================
+=================================================================
+=================================================================*/
+.fotter-center{
+    position: relative;
+    left: -20px;
+    top: 10px;
+    width: 120%;
+    height: auto;
+    background-color: #FFFFFF;
+    margin-top: 50px;
+}
+.fotter-one{
+    position: relative;
+    width: 100%;
+    height: 136px;
+    border-bottom: 1px solid #bcbcbc;
+}
+.fotter-two{
+    position: relative;
+    width: 100%;
+    height: 228px;
+    border-bottom: 1px solid #bcbcbc;
+}
+.fotter-three{
+    position: relative;
+    width: 100%;
+    height: 584px;
+    border-bottom: 1px solid #bcbcbc;
+}
+.fotter-foure{
+    position: relative;
+    width: 100%;
+    height: 244px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
