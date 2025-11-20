@@ -762,34 +762,65 @@
 =================================================================
 =================================================================*/
 
-.three{
+.three {
     position: relative;
-    width: auto;
+    width: 100%; /* Изменили с 4500px на 100%, чтобы контейнер занимал всю ширину */
     height: auto;
     margin-top: 100px;
-    right: 300px;
+    overflow-x: hidden; /* Скрываем горизонтальный скролл */
+    overflow-y: visible; /* Показываем верытикальный скролл, если нужно */
 }
-.three-center{
-    width: auto;
-    height: auto;
+
+.three-center {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
-    gap: 20px;
+    justify-content: flex-start;
+    gap: 20px; /* Уже установлено */
+    width: max-content; /* ВАЖНО: ширина зависит от содержимого */
+    height: auto; /* Уже установлено */
+    cursor: grab; /* Уже установлено */
+    user-select: none; /* Уже установлено */
+
+    transform: translateX(270px); /* <-- Вот это смещает визуально при загрузке */
+
+    /* (Опционально) Плавный переход для transform */
+    transition: transform 0.1s ease;
+}
+.three-center:active {
+    cursor: grabbing; /* Изменяем курсор при активном перетаскивании */
+}
+/* Стили для скроллбара (опционально) */
+.three-center::-webkit-scrollbar {
+    height: 8px; /* Высота горизонтального скроллбара */
+}
+.three-center::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+.three-center::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+.three-center::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }
 
 .three-center-one{
+    position: relative;
     width: auto;
     height: 400px;
     display: flex;
     flex-direction: column;
+    flex-shrink: 0;
 }
 .three-center-one-text-up{
     position: relative;
+    margin-top: -25px;
+    margin-bottom: 10px;
     width: auto;
     height: auto;
-    font-family: 'Roboto Flex';
+    font-family: "Roboto Flex", sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -805,10 +836,10 @@
 }
 .three-center-one-text-center{
     /* Text */
-    width: 450px;
+    width: 480px;
     height: auto;
     /* Display/Medium */
-    font-family: 'Roboto Flex';
+    font-family: "Roboto Flex", sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 48px;
@@ -822,7 +853,6 @@
     order: 1;
     align-self: stretch;
     flex-grow: 0;
-    margin-top: 10px;
 }
 .three-center-one-text-botten {
     /* Убираем position: relative; и top */
@@ -831,7 +861,7 @@
     height: auto;
     padding-top: 290px;
     /* Body/Regular/Medium */
-    font-family: 'Roboto Flex';
+    font-family: "Roboto Flex", sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -853,10 +883,12 @@
     z-index: 0;
 }
 .three-center-two{
+    position: relative;
     width: 648px;
     height: 460px;
     display: flex;
     flex-direction: column;
+     flex-shrink: 0;
 }
 .three-center-two-photo-two{
     position: absolute;
@@ -870,7 +902,7 @@ width: 428px;
 height: auto;
 
 /* Display/Small */
-font-family: 'Roboto Flex';
+font-family: "Roboto Flex", sans-serif;
 font-style: normal;
 font-weight: 500;
 font-size: 36px;
@@ -920,7 +952,7 @@ left: 12px;
 top: 12px;
 
 /* Body/Regular/Md/Small */
-font-family: 'Roboto Flex';
+font-family: "Roboto Flex", sans-serif;
 font-style: normal;
 font-weight: 500;
 font-size: 14px;
@@ -1005,6 +1037,215 @@ font-variation-settings: 'GRAD' 0, 'slnt' 0, 'XTRA' 468, 'XOPQ' 96, 'YOPQ' 79, '
 
     /* Убираем pointer-events, чтобы клики проходили через иконку к кнопке */
     pointer-events: none;
+}
+.three-center-three{
+    position: relative;
+    width: 648px;
+    height: 460px;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+.three-center-three-photo{
+position: absolute;
+left: 45px;
+top: 45px;
+
+}
+
+.three-center-three-text-center{
+    position: relative;
+    width: auto;
+    height: auto;
+}
+.three-center-three-text-center-up{
+position: relative;
+width: 424px;
+height: 32px;
+top: 136px;
+left: 32px;
+font-family: "Roboto Flex", sans-serif;
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 32px;
+/* identical to box height, or 133% */
+
+/* Secondary/600 */
+color: #243048;
+font-stretch: 120;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+}
+
+.three-center-three-text-center-bottom{
+position: relative;
+width: 360px;
+height: 72px;
+top: 150px;
+left: 32px;
+/* Body/Regular/Medium */
+font-family: "Roboto Flex", sans-serif;
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+/* or 150% */
+letter-spacing: 0.15px;
+
+/* Secondary/600 */
+color: #243048;
+font-stretch: 120;
+font-variation-settings: 'GRAD' 0, 'slnt' 0, 'XTRA' 468, 'XOPQ' 96, 'YOPQ' 79, 'YTLC' 514, 'YTUC' 712, 'YTAS' 750, 'YTDE' -203, 'YTFI' 738;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+}
+.three-center-three-buttem{
+    /* Sq Button */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 200px;
+height: 124px;
+left: 32px;
+bottom: 32px;
+top: 304px;
+/* White */
+background: #FFFFFF;
+/* Secondary/100 */
+border: 1px solid #E9EAED;
+border-radius: 12px;
+
+}
+
+.three-center-three-buttem-text{
+    /* Подробнее */
+
+position: absolute;
+width: 80px;
+height: 20px;
+left: 12px;
+top: 12px;
+
+/* Body/Regular/Md/Small */
+font-family: "Roboto Flex", sans-serif;
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 20px;
+/* identical to box height, or 143% */
+letter-spacing: 0.15px;
+
+/* Secondary/600 */
+color: #243048;
+font-stretch: 120;
+font-variation-settings: 'GRAD' 0, 'slnt' 0, 'XTRA' 468, 'XOPQ' 96, 'YOPQ' 79, 'YTLC' 514, 'YTUC' 712, 'YTAS' 750, 'YTDE' -203, 'YTFI' 738;
+
+
+}
+.three-center-three-buttem-krug {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    right: 12px;
+    bottom: 12px;
+    justify-content: center;
+    align-items: center;
+    background: #243048;
+    border-radius: 100px;
+    outline: none;
+    border: none; /* Убираем border по умолчанию */
+    cursor: pointer; /* Меняем курсор на указатель при наведении */
+    transform: rotate(180deg);
+    transition: transform 0.1s ease; /* Плавный переход для transform */
+}
+
+/* Стили при наведении (опционально, как у других кнопок) */
+.three-center-three-buttem-krug:hover {
+    transform: rotate(180deg) scale(1.05); /* Поворот + лёгкое увеличение */
+}
+
+/* Стили при нажатии */
+.three-center-three-buttem-krug:active {
+    transform: rotate(180deg) scale(1.1); /* Поворот + увеличение при нажатии */
+}
+
+.three-krug {
+    position: relative;
+    width: 16px;
+    height: 12px;
+    pointer-events: none; /* Иконка не мешает кликам по кнопке */
+}
+
+.three-center-fore{
+    position: relative;
+    width: 648px;
+    height: 460px;
+    background-color: #FFFFFF;
+    flex-shrink: 0;
+}
+.three-center-five{
+    position: relative;
+    width: 648px;
+    height: 460px;
+    background-color: #FFFFFF;
+    flex-shrink: 0;
+}
+.three-center-six{
+    position: relative;
+    width: 648px;
+    height: 460px;
+    background-color: #FFFFFF; 
+    flex-shrink: 0;
+}
+.three-center-seven{
+    position: relative;
+    width: 648px;
+    height: 460px;
+    background-color: #FFFFFF; 
+    flex-shrink: 0;
+}
+
+.three-center-three-text-center-bottom-seven{
+position: relative;
+width: 500px;
+height: 72px;
+top: 180px;
+left: 32px;
+/* Body/Regular/Medium */
+font-family: "Roboto Flex", sans-serif;
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+/* or 150% */
+letter-spacing: 0.15px;
+
+/* Secondary/600 */
+color: #243048;
+font-stretch: 120;
+font-variation-settings: 'GRAD' 0, 'slnt' 0, 'XTRA' 468, 'XOPQ' 96, 'YOPQ' 79, 'YTLC' 514, 'YTUC' 712, 'YTAS' 750, 'YTDE' -203, 'YTFI' 738;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
 }
 /*================================================================
 ==================================================================
